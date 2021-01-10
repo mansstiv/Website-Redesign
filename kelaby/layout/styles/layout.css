@@ -580,7 +580,7 @@ nav ol {
 
 /* Breadcrumb */
 #breadcrumb {
-  padding: 150px 0 20px;
+  padding: 50px 0 0;
 }
 #breadcrumb ul {
   margin: 0;
@@ -597,14 +597,19 @@ nav ol {
   display: block;
   position: relative;
   margin: 0;
-  padding: 0 12px 0 0;
+  padding: 0 5px 0 0;
   font-size: 12px;
 }
 #breadcrumb li a::after {
   top: 3px;
   right: 0;
-  content: "\f101";
+  font-size: 22px;
 }
+#breadcrumb li span {
+  font-size: 22px;
+  color: #363636;
+}
+
 #breadcrumb li:last-child a {
   margin: 0;
   padding: 0;
@@ -1408,4 +1413,63 @@ form.example::after {
 .one_quarter a:active {
   font-weight: bold;
   color: #00acee;
+}
+
+#breadcrumb .heading,
+#breadcrumb a {
+  color: #363636;
+}
+
+#breadcrumb ul a {
+  font-size: 14px;
+  /* font-weight: bolder; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+#breadcrumb ul {
+  background: #f0f0f0;
+}
+
+.hyperlink:hover,
+.hyperlink:focus,
+.hyperlink:active {
+  text-decoration: underline;
+  color: rgb(9, 9, 124) !important;
+}
+
+.one_half {
+  margin-top: 20px;
+}
+
+.one_half h6 {
+  font-size: 18px;
+  margin-top: 50px;
+  font-weight: bolder;
+}
+
+.one_half ul {
+  list-style-type: none;
+}
+.one_half ul li {
+  margin-bottom: 5px;
+}
+
+.one_half ul li i {
+  margin-right: 9px;
+}
+
+.mycontainer {
+  padding: 50px 0;
+}
+
+.address {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.address i {
+  margin-right: 10px;
 }
