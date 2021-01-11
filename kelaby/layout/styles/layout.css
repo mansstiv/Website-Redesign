@@ -1473,3 +1473,15 @@ form.example::after {
 .address i {
   margin-right: 10px;
 }
+
+.top-margin-50 {
+  margin-top: 50px;
+}
+
+.covid ul {
+  list-style: decimal;
+}
+
+.covid h6 {
+  font-size: 22px;
+}
