@@ -989,6 +989,7 @@ blockquote::before {
 }
 
 /* Navigation */
+
 #mainav li a {
   color: inherit;
 }
