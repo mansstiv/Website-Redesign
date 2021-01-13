@@ -24,7 +24,7 @@ include_once 'header.php' // Include header of page
 
 <div class="wrapper row3">
     <main class="hoc mycontainer clear">
-        <form action="action_page.php" style="border:1px solid #ccc">
+        <form action="includes/signup.inc.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
                 <p>Παρακαλώ συμπλήρωσε την ακόλουθη φόρμα για να κάνεις εγγραφή.</p>
                 <hr>
@@ -78,7 +78,7 @@ include_once 'header.php' // Include header of page
                 </div>
 
                 <div class="clearfix">
-                    <button type="submit" class="signupbtn">Εγγραφή</button>
+                    <button type="submit" name="submit" class="signupbtn">Εγγραφή</button>
                 </div>
 
             </div>

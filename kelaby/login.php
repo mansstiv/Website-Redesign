@@ -24,7 +24,7 @@ include_once 'header.php' // Include header of page
 
 <div class="wrapper row3">
     <main class="hoc mycontainer clear">
-        <form action="action_page.php" style="border:1px solid #ccc">
+        <form action="includes/login.inc.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
 
                 <p>Παρακαλώ συμπλήρωσε τα στοιχεία σου για να συνδεθείς.</p>
