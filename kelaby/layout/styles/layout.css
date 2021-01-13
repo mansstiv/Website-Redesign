@@ -1437,7 +1437,7 @@ form.example::after {
 .hyperlink:focus,
 .hyperlink:active {
   text-decoration: underline;
-  color: rgb(9, 9, 124) !important;
+  /* color: rgb(9, 9, 124) !important; */
 }
 
 .one_half {
@@ -1485,4 +1485,43 @@ form.example::after {
 
 .covid h6 {
   font-size: 22px;
+}
+
+.clear-text-transform {
+  text-transform: none !important;
+}
+
+.font-size-15 {
+  font-size: 15px;
+}
+
+.font-size-heading {
+  font-size: 28px;
+}
+
+.list-covid-info {
+  margin-top: 0px !important;
+  list-style-type: circle;
+}
+
+.list-layout {
+  text-align: center;
+  border: 2px solid #e4e3e3;
+  border-top: 3px solid #2283b4;
+}
+.list-layout:hover {
+  border-top-color: #2283b4;
+}
+
+.list-layout a {
+  color: #2283b4 !important;
+  font-size: 25px;
+}
+.list-layout a:hover {
+  text-decoration: underline;
+  font-weight: normal !important;
+}
+
+.top-margin-13 {
+  margin-top: 13px;
 }
