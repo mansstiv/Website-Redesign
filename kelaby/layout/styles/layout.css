@@ -1525,3 +1525,99 @@ form.example::after {
 .top-margin-13 {
   margin-top: 13px;
 }
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #e2e2e2;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.clearfix {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Set a style for all buttons */
+.clearfix button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 3px;
+}
+
+.clearfix button:hover {
+  opacity: 1;
+}
+
+/* Add padding to container elements */
+.signup-container {
+  padding: 16px;
+  margin: 40px 150px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+.allign-center {
+  text-align: center;
+}
+
+.two-in-one-row-form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.one-element-form {
+  width: 100%;
+}
+
+.margin-right {
+  margin-right: 30px;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.radio-buttons label {
+  display: inline-block;
+}
+
+.radio-button label {
+  margin-left: 3px;
+}

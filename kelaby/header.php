@@ -30,8 +30,8 @@ Licence URI: http://www.os-templates.com/template-terms
             <div class="fl_right">
                 <ul>
                     <li><a href="index.php"><i class="fa fa-lg fa-home"></i></a></li>
-                    <li><a href="#">ΕΓΓΡΑΦΗ</a></li>
-                    <li><a href="#">ΕΙΣΟΔΟΣ</a></li>
+                    <li><a href="signup.php">ΕΓΓΡΑΦΗ</a></li>
+                    <li><a href="login.php">ΕΙΣΟΔΟΣ</a></li>
                 </ul>
             </div>
             <!-- ################################################################################################ -->
