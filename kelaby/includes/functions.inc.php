@@ -18,7 +18,47 @@ function  emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $e
     return $result;
 }
 
+    
+function emptyInputDate($afm, $startDate, $endDate)
+{
+    $result = false;
+    
+    if (empty($afm) || empty($startDate) || empty($endDate) ) {
+        $result = true;
+    }
+    
 
+    
+    return $result;
+    
+}
+    
+function updateRemoteDate($conn,$afm,$startDate,$endDate)
+{
+    
+    $sql = "update employee ,users SET employee.worksRemote_startDate = ? ,employee.worksRemote_endDate = ?
+    WHERE   users.username=employee.userName AND users.afm=? ;";
+    $stmt = mysqli_stmt_init($conn);
+    
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../employee-remote.php?error=dateFail");
+        exit();
+    }
+    
+    
+    mysqli_stmt_bind_param($stmt, "ssi", $startDate, $endDate, $afm);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    
+    
+    header("location: ../employee-remote.php?error=none");
+    exit();
+    
+    
+}
+
+    
+    
 function invalidUid($username)
 {
     $result = false;
