@@ -98,7 +98,7 @@ ALTER TABLE `users`
 -- Περιορισμοί για πίνακα `employee`
 --
 ALTER TABLE `employee`
-  ADD CONSTRAINT `employee_ibfk_2` FOREIGN KEY (`employerAfm`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`employerAfm`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
