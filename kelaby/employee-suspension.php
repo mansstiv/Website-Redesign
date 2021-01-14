@@ -36,7 +36,10 @@ include_once 'header.php' // Include header of page
             $countries['AD'] = 'Andorra';
             $countries['AO'] = 'Angola';
 
+            // echo $_SESSION["employeesForEmployer"][0]["firstname"];
+
             echo "<select>";
+
 
             foreach ($countries as $id => $name)
                 echo "<option value=\"$id\">$name</option>";

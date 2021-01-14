@@ -88,50 +88,46 @@ function uidExists($conn, $username, $email)
     mysqli_stmt_close($stmt);
 }
 
-function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username,$employerAfm)
+function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, $employerAfm)
 {
     $isEmployer = 0;
     if ($userType == "employer") {
         $isEmployer = 1;
     }
-    
+
     $sql = "INSERT INTO users (firstname, lastname, username, email, isEmployer, password, afm)
     VALUES (?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
-    
+
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed");
         exit();
     }
-    
+
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    
+
     mysqli_stmt_bind_param($stmt, "ssssisi", $firstname, $lastname, $username, $email, $isEmployer, $hashedPassword, $afm);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    
-    if($isEmployer ==0){
+
+    if ($isEmployer == 0) {
         $sql = "INSERT INTO employee (userName, employerAfm)
         VALUES(?,?);";
         $stmt = mysqli_stmt_init($conn);
-        
+
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("location: ../signup.php?error=stmtfailed");
             exit();
         }
-        mysqli_stmt_bind_param($stmt, "si", $username , $employerAfm );
+        mysqli_stmt_bind_param($stmt, "si", $username, $employerAfm);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
-        
     }
-    
-    
-    
+
+
+
     header("location: ../signup.php?error=none");
     exit();
-    
-    
-    
 }
 
 
@@ -144,6 +140,35 @@ function  emptyInputLogin($username, $password)
     }
 
     return $result;
+}
+
+
+function getEmployeesForEmployer($conn, $employerAfm)
+{
+    $sql = "SELECT us1.firstname , us1.lastname
+        FROM users us1,users us2 , employee
+        WHERE (employee.userName = us1.username) AND (employee.employerAfm = us2.afm) AND (us2.afm=?);";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: signup.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $employerAfm);
+    mysqli_stmt_execute($stmt);
+
+
+    $resultData = mysqli_stmt_get_result($stmt);
+    $results = array();
+
+    while ($row = mysqli_fetch_assoc($resultData)) {
+        $results[] = $row;
+    }
+
+    mysqli_stmt_close($stmt);
+
+    return $results;
 }
 
 function loginUser($conn, $username, $password)
@@ -168,6 +193,7 @@ function loginUser($conn, $username, $password)
         $_SESSION["username"] = $uidExists["username"];
         $_SESSION["firstname"] = $uidExists["firstname"];
         $_SESSION["lastname"] = $uidExists["lastname"];
+        $_SESSION["employeesForEmployer"] = getEmployeesForEmployer($conn, $uidExists["afm"]);
         header("location: ../index.php");
         exit();
     }
