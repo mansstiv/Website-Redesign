@@ -71,7 +71,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
                 <li><a class="drop" href="employer.php">ΕΡΓΟΔΟΤΗΣ</a>
                     <ul>
-                        <li><a href="employee-suspension.php">ΔΗΛΩΣΗ ΕΞ ΑΠΟΣΤΑΣΕΩΣ ΕΡΓΑΣΙΑΣ ΓΙΑ ΕΡΓΑΖΟΜΕΝΟ</a></li>
+                        <li><a href="employee-remote.php">ΔΗΛΩΣΗ ΕΞ ΑΠΟΣΤΑΣΕΩΣ ΕΡΓΑΣΙΑΣ ΓΙΑ ΕΡΓΑΖΟΜΕΝΟ</a></li>
                         <li><a href="pages/sidebar-right.php">ΑΝΑΣΤΟΛΗ ΣΥΜΒΑΣΗΣ ΕΡΓΑΣΙΑΣ ΓΙΑ ΕΡΓΑΖΟΜΕΝΟ</a></li>
                     </ul>
                 </li>

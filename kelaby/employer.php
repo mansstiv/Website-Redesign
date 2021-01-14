@@ -31,7 +31,7 @@ include_once 'header.php' // Include header of page
     </ul>
     <ul class="nospace group services mylist">
       <li class="one_third first list-layout">
-        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="index.php">
+        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="employee-remote.php">
             Δήλωση εξ αποστάσεως εργασίας για εργαζόμενο</a></h6>
         <p class="font-size-15">
           Μάθε για τις επιλογές που έχεις ως εργαζόμενος την εποχή της πανδημίας

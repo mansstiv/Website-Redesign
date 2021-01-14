@@ -145,9 +145,9 @@ function  emptyInputLogin($username, $password)
 
 function getEmployeesForEmployer($conn, $employerAfm)
 {
-    $sql = "SELECT us1.firstname , us1.lastname
-        FROM users us1,users us2 , employee
-        WHERE (employee.userName = us1.username) AND (employee.employerAfm = us2.afm) AND (us2.afm=?);";
+    $sql = "SELECT us1.firstname , us1.lastname, us1.afm
+            FROM users us1,users us2 , employee
+            WHERE (employee.userName = us1.username) AND (employee.employerAfm = us2.afm) AND (us2.afm=?);";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {

@@ -1650,3 +1650,7 @@ input[type="radio"] {
   content: " *";
   color: red;
 }
+
+.btmspace-15 {
+  margin-bottom: 15px;
+}

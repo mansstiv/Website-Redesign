@@ -5,7 +5,7 @@ require_once 'includes/dbh.inc.php';
 
 $employerAfm = 123456789;
 
-$sql = "SELECT us1.firstname , us1.lastname
+$sql = "SELECT us1.firstname , us1.lastname, us1.afm
 FROM users us1,users us2 , employee
 WHERE (employee.userName = us1.username) AND (employee.employerAfm = us2.afm) AND (us2.afm=?);";
 $stmt = mysqli_stmt_init($conn);
@@ -28,4 +28,8 @@ while ($row = mysqli_fetch_assoc($resultData)) {
 
 mysqli_stmt_close($stmt);
 
-echo $results[0]["firstname"];
+foreach ($results as $row) {
+    // $employeesNames[] =  $row["firstname"] . ' ' . $row["lastname"];
+    // $employeesAfm[] = $row["afm"];
+    echo $row["afm"];
+}
