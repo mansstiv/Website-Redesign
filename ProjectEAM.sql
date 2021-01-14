@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: localhost
--- Χρόνος δημιουργίας: 14 Ιαν 2021 στις 15:23:45
+-- Χρόνος δημιουργίας: 14 Ιαν 2021 στις 16:24:37
 -- Έκδοση διακομιστή: 10.4.17-MariaDB
 -- Έκδοση PHP: 8.0.0
 
@@ -38,6 +38,14 @@ CREATE TABLE `employee` (
   `permission_endDate` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Άδειασμα δεδομένων του πίνακα `employee`
+--
+
+INSERT INTO `employee` (`userName`, `employerAfm`, `inSuspension_startDate`, `inSuspension_endDate`, `worksRemote_startDate`, `worksRemote_endDate`, `permission_startDate`, `permission_endDate`) VALUES
+('aaaa1234', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00'),
+('xfsafdsfa', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00');
+
 -- --------------------------------------------------------
 
 --
@@ -61,8 +69,12 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `isEmployer`, `password`, `afm`) VALUES
 (3, 'Vasiliss', 'Vazakos', 'vazakos', 'vazakos@gmail.com', 0, '$2y$10$r7yOlECLFC57Gb2hM7qNMu9TrxGE2NC6uCdrHr1sox1aDDFuGAOuq', 525252525),
-(6, 'asdsda', 'asddas', 'asffsdafdas', 'sdi1700152@di.uoa.gr', 0, '$2y$10$z93ZQZwVqpArQ6W8a9q18OP5drhJjV4b0jOf5cy05rs7HW3JCEiZq', 525252525),
-(7, 'ΧΡΙΣΤΙΝΑ-ΘΕΑΝΩ', 'ΚΥΛΑΦΗ', 'doYouEvenExist', 'te_ti_na@hotmail.com', 0, '$2y$10$HVP47zKhVLfwQ1IsrGfhKOySIF4kdLzWyxuTsS8u2z57jLp.Pfuka', 123456789);
+(6, 'asdsda', 'asddas', 'asffsdafdas', 'sdi1700152@di.uoa.gr', 1, '$2y$10$z93ZQZwVqpArQ6W8a9q18OP5drhJjV4b0jOf5cy05rs7HW3JCEiZq', 525252525),
+(7, 'ΧΡΙΣΤΙΝΑ-ΘΕΑΝΩ', 'ΚΥΛΑΦΗ', 'doYouEvenExist', 'te_ti_na@hotmail.com', 1, '$2y$10$HVP47zKhVLfwQ1IsrGfhKOySIF4kdLzWyxuTsS8u2z57jLp.Pfuka', 123456789),
+(8, 'sdfsdf', 'sdafdsaf', 'safasdf', 'aasdsdi1700040@di.uoa.gr', 0, '$2y$10$RuEWT0uo8B0Y1TKBp7J8EOxmzGtCcA.uT1dGsCD9wCIl/zFIpLLyq', 123123124),
+(9, 'dsaf', 'asdf', 'sdaf', 'sdi17000sdfsdf40@di.uoa.gr', 0, '$2y$10$0hJgsDx/55a4w3ovVsjx7uKzQieoNwYrf6p8zvJ/EGvAW7MJfXD5i', 123132342),
+(10, 'Georgios', 'kazakos', 'aaaa1234', 'sdi1700sfdafdafrdsrewqr32rfdw040@di.uoa.gr', 0, '$2y$10$hQXcsleANc9WjtEgFuJL0O1OS99eQaBitl4x74bP4FZr.m6ngn9Ha', 123123123),
+(11, 'Georgios1', 'kazakos', 'xfsafdsfa', 'vasilis_asdfdsafkazakos@icloud.com', 0, '$2y$10$q7PPMPMtaUfazE9pBu2CWu4QLplCuMyLpolPriu6jfdH2p44H6T7O', 123123123);
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
@@ -88,17 +100,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT για πίνακα `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- Περιορισμοί για άχρηστους πίνακες
---
-
---
--- Περιορισμοί για πίνακα `employee`
---
-ALTER TABLE `employee`
-  ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`employerAfm`) REFERENCES `users` (`id`);
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
