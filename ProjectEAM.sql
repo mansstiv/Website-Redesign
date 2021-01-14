@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Φιλοξενητής: localhost
--- Χρόνος δημιουργίας: 13 Ιαν 2021 στις 20:14:41
--- Έκδοση διακομιστή: 10.4.17-MariaDB
--- Έκδοση PHP: 8.0.0
+-- Host: localhost
+-- Generation Time: Jan 14, 2021 at 02:41 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Βάση δεδομένων: `ProjectEAM`
+-- Database: `ProjectEAM`
 --
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `employee`
+-- Table structure for table `employee`
 --
 
 CREATE TABLE `employee` (
@@ -41,59 +41,62 @@ CREATE TABLE `employee` (
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `firstName` varchar(255) NOT NULL,
-  `lastName` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `type` tinyint(1) NOT NULL,
-  `passowrd` varchar(128) DEFAULT NULL
+  `isEmployer` tinyint(1) NOT NULL,
+  `password` varchar(128) DEFAULT NULL,
+  `afm` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Άδειασμα δεδομένων του πίνακα `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `type`, `passowrd`) VALUES
-(1, 'mitoss', 'mitsos', 'mitso@gmail.com', 1, NULL),
-(2, 'mitoss', 'mitsos', 'mitso@gmail.com', 1, NULL);
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `isEmployer`, `password`, `afm`) VALUES
+(3, 'Vasiliss', 'Vazakos', 'vazakos', 'vazakos@gmail.com', 0, '$2y$10$r7yOlECLFC57Gb2hM7qNMu9TrxGE2NC6uCdrHr1sox1aDDFuGAOuq', 525252525),
+(6, 'asdsda', 'asddas', 'asffsdafdas', 'sdi1700152@di.uoa.gr', 0, '$2y$10$z93ZQZwVqpArQ6W8a9q18OP5drhJjV4b0jOf5cy05rs7HW3JCEiZq', 525252525),
+(7, 'ΧΡΙΣΤΙΝΑ-ΘΕΑΝΩ', 'ΚΥΛΑΦΗ', 'doYouEvenExist', 'te_ti_na@hotmail.com', 0, '$2y$10$HVP47zKhVLfwQ1IsrGfhKOySIF4kdLzWyxuTsS8u2z57jLp.Pfuka', 123456789);
 
 --
--- Ευρετήρια για άχρηστους πίνακες
+-- Indexes for dumped tables
 --
 
 --
--- Ευρετήρια για πίνακα `employee`
+-- Indexes for table `employee`
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`id`),
   ADD KEY `employerId` (`employerId`);
 
 --
--- Ευρετήρια για πίνακα `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT για άχρηστους πίνακες
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT για πίνακα `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Περιορισμοί για άχρηστους πίνακες
+-- Constraints for dumped tables
 --
 
 --
--- Περιορισμοί για πίνακα `employee`
+-- Constraints for table `employee`
 --
 ALTER TABLE `employee`
   ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`),

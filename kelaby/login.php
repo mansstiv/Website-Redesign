@@ -30,23 +30,38 @@ include_once 'header.php' // Include header of page
                 <p>Παρακαλώ συμπλήρωσε τα στοιχεία σου για να συνδεθείς.</p>
                 <hr>
 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Εισήγαγε το Email" name="email">
+                <label for="uid"><b>Ηλεκτρονική Διεύθυνση / Όνομα Χρήστη</b></label>
+                <input type="text" placeholder="Εισήγαγε την Ηλεκτρονική Διεύθυνση ή το Όνομα Χρήστη" name="uid">
 
                 <label for="psw"><b>Κωδικός</b></label>
                 <input type="password" placeholder="Εισήγαγε τον Κωδικό" name="psw">
 
                 <div class="clearfix">
-                    <button type="submit" class="signupbtn">Είσοδος</button>
+                    <button type="submit" name="submit" class="signupbtn">Είσοδος</button>
                 </div>
                 <div class="allign-center">
-                    <p>Δεν έχεις κάνει εγγραφή; <a class="hyperlink" href="signup.php" style="color:dodgerblue">Φτιάξε λογαριασμό</a>.</p>
+                    <p>Δεν έχεις κάνει εγγραφή; <a class="hyperlink" href="signup.php">Φτιάξε λογαριασμό</a>.</p>
                 </div>
+
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "emptyinput") {
+                        echo "<p class='error-message'>Συμπλήρωσε όλα τα πεδία !</p>";
+                    } else if ($_GET["error"] == "wronglogin") {
+                        echo "<p class='error-message'>Μη έγκυρο όνομα χρήστη!</p>";
+                    } else if ($_GET["error"] == "wrongloginpwd") {
+                        echo "<p class='error-message'>Μη έγκυρος κωδικός πρόσβασης!</p>";
+                    }
+                }
+                ?>
+
             </div>
         </form>
         <div class="clear btmspace-50"></div>
     </main>
 </div>
+
+
 <?php
 include_once 'footer.php' // Include footer of page
 ?>

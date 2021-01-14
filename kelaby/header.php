@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <!--
 Template Name: Kelaby
@@ -28,11 +33,22 @@ Licence URI: http://www.os-templates.com/template-terms
             </div>
 
             <div class="fl_right">
+
                 <ul>
-                    <li><a href="index.php"><i class="fa fa-lg fa-home"></i></a></li>
-                    <li><a href="signup.php">ΕΓΓΡΑΦΗ</a></li>
-                    <li><a href="login.php">ΕΙΣΟΔΟΣ</a></li>
+                    <?php
+                    if (isset($_SESSION["username"])) {
+                        // echo "<li><a href='index.php'><i class='fa fa-lg fa-home'></i></a></li>";
+                        echo "<li><a href='profile.php'><i class='fas fa-user'></i>" . $_SESSION["username"] . "</a></li>";
+                        echo "<li><a href='includes/logout.inc.php'>ΑΠΟΣΥΝΔΕΣΗ</a></li>";
+                    } else {
+                        // echo "<li><a href='index.php'><i class='fa fa-lg fa-home'></i></a></li>";
+                        echo "<li><a href='signup.php'>ΕΓΓΡΑΦΗ</a></li>";
+                        echo "<li><a href='login.php'>ΕΙΣΟΔΟΣ</a></li>";
+                    }
+
+                    ?>
                 </ul>
+
             </div>
             <!-- ################################################################################################ -->
         </div>

@@ -891,6 +891,7 @@ blockquote::before {
 .row2 {
   color: #363636;
   background-color: #f6f6f6;
+  /* background-color: #eeeeee; */
   border-color: #1c7aa8;
 }
 .row3 {
@@ -918,7 +919,12 @@ blockquote::before {
   border-color: rgba(255, 255, 255, 0.2);
 }
 #topbar > div:last-of-type li:first-child a {
-  color: #1c7aa8;
+  /* color: #0b7dda; */
+  color: #cbcbcb;
+}
+
+#topbar > div:last-of-type li a:hover {
+  color: #00acee;
 }
 
 /* Header */
@@ -1620,4 +1626,18 @@ input[type="radio"] {
 
 .radio-button label {
   margin-left: 3px;
+}
+
+.error-message {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(219, 2, 2);
+}
+
+.ok-message {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #1c7aa8;
 }

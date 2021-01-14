@@ -43,8 +43,8 @@ include_once 'header.php' // Include header of page
 
                 <div class="two-in-one-row-form">
                     <div class="one-element-form margin-right">
-                        <label for="uid"><b>Username</b></label>
-                        <input type="text" placeholder="Εισήγαγε το Username" name="uid" required>
+                        <label for="uid"><b>Όνομα Χρήστη</b></label>
+                        <input type="text" placeholder="Εισήγαγε το Όνομα Χρήστη" name="uid" required>
                     </div>
 
                     <div class="one-element-form">
@@ -53,11 +53,9 @@ include_once 'header.php' // Include header of page
                     </div>
                 </div>
 
-                <!-- <label for="uid"><b>Username</b></label>
-                <input type="text" placeholder="Εισήγαγε το Username" name="uid" required> -->
 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Εισήγαγε το Email" name="email" required>
+                <label for="email"><b>Ηλεκτρονική Διεύθυνση</b></label>
+                <input type="text" placeholder="Εισήγαγε την ηλεκτρονική διεύθυνση" name="email" required>
 
                 <label for="psw"><b>Κωδικός</b></label>
                 <input type="password" placeholder="Εισήγαγε τον Κωδικό" name="psw" required>
@@ -81,7 +79,30 @@ include_once 'header.php' // Include header of page
                     <button type="submit" name="submit" class="signupbtn">Εγγραφή</button>
                 </div>
 
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "emptyinput") {
+                        echo "<p class='error-message'>Συμπλήρωσε όλα τα πεδία !</p>";
+                    } else if ($_GET["error"] == "invaliduid") {
+                        echo "<p class='error-message'>Μη έγκυρο όνομα χρήστη!</p>";
+                    } else if ($_GET["error"] == "invalidemail") {
+                        echo "<p class='error-message'>Μη έγκυρη ηλεκτρονική διεύθυνση!</p>";
+                    } else if ($_GET["error"] == "invalideafm") {
+                        echo "<p class='error-message'>Μη έγκυρο ΑΦΜ! Το ΑΦΜ πρέπει να αποτελείται απο 9 αριθμούς!</p>";
+                    } else if ($_GET["error"] == "pwddontmatch") {
+                        echo "<p class='error-message'>Οι κωδικοί δεν ταιριάζουν!</p>";
+                    } else if ($_GET["error"] == "usernametaken") {
+                        echo "<p class='error-message'>Το username ή το email χρησιμοποιείται ήδη!</p>";
+                    } else if ($_GET["error"] == "stmtfailed") {
+                        echo "<p class='error-message'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
+                    } else if ($_GET["error"] == "none") {
+                        echo "<p class='ok-message'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
+                    }
+                }
+                ?>
+
             </div>
+
         </form>
         <div class="clear btmspace-50"></div>
     </main>
