@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 14, 2021 at 02:41 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Φιλοξενητής: localhost
+-- Χρόνος δημιουργίας: 14 Ιαν 2021 στις 15:23:45
+-- Έκδοση διακομιστή: 10.4.17-MariaDB
+-- Έκδοση PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,18 +18,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ProjectEAM`
+-- Βάση δεδομένων: `ProjectEAM`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employee`
+-- Δομή πίνακα για τον πίνακα `employee`
 --
 
 CREATE TABLE `employee` (
-  `id` int(11) NOT NULL,
-  `employerId` int(11) NOT NULL,
+  `userName` varchar(255) NOT NULL,
+  `employerAfm` int(9) NOT NULL,
   `inSuspension_startDate` date DEFAULT '0000-00-00',
   `inSuspension_endDate` date DEFAULT '0000-00-00',
   `worksRemote_startDate` date DEFAULT '0000-00-00',
@@ -41,7 +41,7 @@ CREATE TABLE `employee` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Δομή πίνακα για τον πίνακα `users`
 --
 
 CREATE TABLE `users` (
@@ -56,7 +56,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Άδειασμα δεδομένων του πίνακα `users`
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `isEmployer`, `password`, `afm`) VALUES
@@ -65,42 +65,40 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `isEmpl
 (7, 'ΧΡΙΣΤΙΝΑ-ΘΕΑΝΩ', 'ΚΥΛΑΦΗ', 'doYouEvenExist', 'te_ti_na@hotmail.com', 0, '$2y$10$HVP47zKhVLfwQ1IsrGfhKOySIF4kdLzWyxuTsS8u2z57jLp.Pfuka', 123456789);
 
 --
--- Indexes for dumped tables
+-- Ευρετήρια για άχρηστους πίνακες
 --
 
 --
--- Indexes for table `employee`
+-- Ευρετήρια για πίνακα `employee`
 --
 ALTER TABLE `employee`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `employerId` (`employerId`);
+  ADD PRIMARY KEY (`userName`);
 
 --
--- Indexes for table `users`
+-- Ευρετήρια για πίνακα `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT για άχρηστους πίνακες
 --
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT για πίνακα `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Constraints for dumped tables
+-- Περιορισμοί για άχρηστους πίνακες
 --
 
 --
--- Constraints for table `employee`
+-- Περιορισμοί για πίνακα `employee`
 --
 ALTER TABLE `employee`
-  ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `employee_ibfk_2` FOREIGN KEY (`employerId`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `employee_ibfk_2` FOREIGN KEY (`employerAfm`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
