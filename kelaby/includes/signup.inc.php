@@ -45,8 +45,15 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
+    if ($userType == "employer") {
+        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username,-1);
+        
+    }else{
+        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username,$employerAfm);
 
-    createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username);
+    }
+    
+    
 } else {
     header("location: ../signup.php");
 }

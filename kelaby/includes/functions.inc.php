@@ -88,31 +88,52 @@ function uidExists($conn, $username, $email)
     mysqli_stmt_close($stmt);
 }
 
-function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username)
+function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username,$employerAfm)
 {
     $isEmployer = 0;
     if ($userType == "employer") {
         $isEmployer = 1;
     }
-
-    $sql = "INSERT INTO users (firstname, lastname, username, email, isEmployer, password, afm) 
-            VALUES (?, ?, ?, ?, ?, ?, ?);";
+    
+    $sql = "INSERT INTO users (firstname, lastname, username, email, isEmployer, password, afm)
+    VALUES (?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
-
+    
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed");
         exit();
     }
-
+    
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
+    
     mysqli_stmt_bind_param($stmt, "ssssisi", $firstname, $lastname, $username, $email, $isEmployer, $hashedPassword, $afm);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-
+    
+    if($isEmployer ==0){
+        $sql = "INSERT INTO employee (userName, employerAfm)
+        VALUES(?,?);";
+        $stmt = mysqli_stmt_init($conn);
+        
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            header("location: ../signup.php?error=stmtfailed");
+            exit();
+        }
+        mysqli_stmt_bind_param($stmt, "si", $username , $employerAfm );
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        
+    }
+    
+    
+    
     header("location: ../signup.php?error=none");
     exit();
+    
+    
+    
 }
+
 
 function  emptyInputLogin($username, $password)
 {
