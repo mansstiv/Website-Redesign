@@ -9,12 +9,13 @@ if (isset($_POST["submit"])) {
     $password = $_POST["psw"];
     $passwordRepeat = $_POST["psw-repeat"];
     $userType = $_POST["usertype"];
+    $employerAfm = $_POST["employer-afm"];
 
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat) !== false) {
+    if (emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat, $employerAfm) !== false) {
         header("location: ../signup.php?error=emptyinput");
         exit();
     }
@@ -43,6 +44,7 @@ if (isset($_POST["submit"])) {
         header("location: ../signup.php?error=usernametaken");
         exit();
     }
+
 
     createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username);
 } else {

@@ -1,11 +1,18 @@
 <?php
 
-function  emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat)
+function  emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat, $employerAfm)
 {
+
     $result = false;
 
-    if (empty($userType) || empty($userType) || empty($userType) || empty($userType) || empty($userType) || empty($userType) || empty($userType) || empty($userType)) {
+    if (empty($userType) || empty($firstname) || empty($lastname) || empty($username) || empty($afm) || empty($email) || empty($password) || empty($passwordRepeat)) {
         $result = true;
+    }
+
+    if ($userType == "employee") {
+        if (empty($employerAfm)) {
+            $result = false;
+        }
     }
 
     return $result;

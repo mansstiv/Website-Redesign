@@ -1620,6 +1620,10 @@ input[type="radio"] {
   margin-bottom: 8px;
 }
 
+.Box {
+  margin-top: 20px;
+}
+
 .radio-buttons label {
   display: inline-block;
 }
@@ -1628,7 +1632,7 @@ input[type="radio"] {
   margin-left: 3px;
 }
 
-.error-message {
+.radio-buttons .error-message {
   margin-top: 25px;
   text-align: center;
   font-weight: bold;
@@ -1640,4 +1644,9 @@ input[type="radio"] {
   text-align: center;
   font-weight: bold;
   color: #1c7aa8;
+}
+
+.required:after {
+  content: " *";
+  color: red;
 }
