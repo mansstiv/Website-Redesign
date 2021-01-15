@@ -90,6 +90,9 @@ Licence URI: http://www.os-templates.com/template-terms
                 <li><a class="drop" href="topics.php">COVID-19</a>
                     <ul>
                         <li><a href="covid.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>
+                        <li><a href="covid-protocol.php">ΠΡΩΤΟΚΟΛΛΟ ΑΝΤΙΜΕΤΩΠΙΣΗΣ ΚΡΟΥΣΜΑΤΟΣ</a></li>
+                        <li><a href="covid-symptoms.php">ΚΥΡΙΑ ΣΥΜΠΤΩΜΑΤΑ</a></li>
+                        <li><a href="covid-support.php">ΜΕΤΡΑ ΣΤΗΡΙΞΗΣ</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Ανακοινωσεις</a></li>
