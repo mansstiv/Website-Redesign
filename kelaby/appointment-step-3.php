@@ -61,9 +61,9 @@ include_once 'header.php' // Include header of page
                 <div class="clearfix submit-appointment">
                     <button type="submit" name="submit" class="signupbtn"><b>Oριστικοποίηση</b></button>
                 </div>
-                <div class="footer-form">
+                <!-- <div class="footer-form">
                     <a class="hyperlink prev" href="appointment-step-2.php">Προηγούμενο</a>
-                </div>
+                </div> -->
             </div>
 
         </form>

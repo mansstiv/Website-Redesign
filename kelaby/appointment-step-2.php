@@ -73,7 +73,7 @@ include_once 'header.php' // Include header of page
 
 <div class="wrapper row3">
     <main class="hoc mycontainer clear">
-        <form action="includes/signup.inc.php" method="post" style="border:1px solid #ccc">
+        <form action="iappointment-step-3.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
 
                 <div class="group btmspace-50 steps-header">
@@ -122,11 +122,13 @@ include_once 'header.php' // Include header of page
                     <option value="0">Έναρξη: 15:30</option>
                     <option value="0">Έναρξη: 18:15</option>
                 </select>
-
-                <div class="footer-form">
+                <div class="clearfix submit-appointment">
+                    <button type="submit" name="submit" class="signupbtn"><b>Επόμενο</b></button>
+                </div>
+                <!-- <div class="footer-form">
                     <a class="hyperlink prev" href="appointment-step-1.php">Προηγούμενο</a>
                     <a class="hyperlink next" href="appointment-step-3.php">Επόμενο</a>
-                </div>
+                </div> -->
 
             </div>
 

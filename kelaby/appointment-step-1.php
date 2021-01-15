@@ -23,7 +23,7 @@ include_once 'header.php' // Include header of page
 
 <div class="wrapper row3">
     <main class="hoc mycontainer clear">
-        <form action="includes/signup.inc.php" method="post" style="border:1px solid #ccc">
+        <form action="appointment-step-2.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
 
                 <div class="group btmspace-50 steps-header">
@@ -72,9 +72,12 @@ include_once 'header.php' // Include header of page
                     <label class="required" for="reason-appointment"><b>Λόγος Ραντεβού</b></label>
                     <input type="text" placeholder="Περιγράψτε συνοπτικά τους λόγους του ραντεβού" name="reason-appointment" required>
                 </div>
-                <div class="footer-form">
-                    <a class="hyperlink next" href="appointment-step-2.php">Επόμενο</a>
+                <div class="clearfix submit-appointment">
+                    <button type="submit" name="submit" class="signupbtn"><b>Επόμενο</b></button>
                 </div>
+                <!-- <div class="footer-form">
+                    <a class="hyperlink next" href="appointment-step-2.php">Επόμενο</a>
+                </div> -->
             </div>
         </form>
         <div class="clear btmspace-50"></div>
