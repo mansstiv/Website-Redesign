@@ -9,12 +9,12 @@ include_once 'header.php' // Include header of page
 
 <div class="bgded" style="background:white;">
     <div id="breadcrumb" class="hoc clear">
-        <h6 class="heading font-x3">Δήλωση αναστολής σύμβασης εργασίας εργαζομένων</h6>
+        <h6 class="heading font-x3">Δήλωση αναστολής σύμβασης εργασίας</h6>
         <ul>
             <li><a style="color: #1c7aa8;" class="hyperlink" href="index.php">ΑΡΧΙΚΗ</a></li>
             <li><span>&#47;</span> </li>
             <li>
-                <p style="color: #363636;">Δηλωση εξ αποστασεως εργασιας για εργαζομενο</p>
+                <p style="color: #363636;">Δηλωση αναστολης συμβασης εργασιας</p>
             </li>
         </ul>
     </div>
@@ -53,11 +53,11 @@ include_once 'header.php' // Include header of page
                     echo "</select>";
                     echo "<div class='two-in-one-row-form'>";
                     echo    "<div class='one-element-form margin-right'>";
-                    echo        "<label class='required btmspace-15' for='startRemoteDay'><b>Έναρξη εξ αποστάσεως εργασίας</b></label>";
+                    echo        "<label class='required btmspace-15' for='startRemoteDay'><b>Έναρξη αναστολής σύμβασης</b></label>";
                     echo        "<input type='date' id='startRemoteDay' name='startRemoteDay' required>";
                     echo    "</div>";
                     echo    "<div class='one-element-form margin-right'>";
-                    echo        "<label class='required btmspace-15' for='endRemoteDay'><b>Λήξη εξ αποστάσεως εργασίας</b></label>";
+                    echo        "<label class='required btmspace-15' for='endRemoteDay'><b>Λήξη αναστολής σύμβασης</b></label>";
                     echo        "<input type='date' id='endRemoteDay' name='endRemoteDay' required>";
                     echo    "</div>";
                     echo "</div>";
