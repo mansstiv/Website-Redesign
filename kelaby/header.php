@@ -87,7 +87,7 @@ Licence URI: http://www.os-templates.com/template-terms
           <li><a href="pages/sidebar-right.php">ΑΝΕΡΓΟΣ</a></li>
         </ul>
       </li> -->
-                <li><a class="drop" href="topics.php">ΘΕΜΑΤΑ</a>
+                <li><a class="drop" href="topics.php">COVID-19</a>
                     <ul>
                         <li><a href="covid.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>
                     </ul>
