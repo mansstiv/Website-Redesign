@@ -56,6 +56,28 @@ function updateRemoteDate($conn,$afm,$startDate,$endDate)
     
     
 }
+    
+function updateSuspensionDate($conn,$afm,$startDate,$endDate)
+{
+    $sql = "update employee ,users SET employee.inSuspension_startDate = ? ,employee.inSuspension_endDate = ?
+    WHERE   users.username=employee.userName AND users.afm=? ;";
+    $stmt = mysqli_stmt_init($conn);
+    
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../employee-suspension.php?error=dateFail");
+        exit();
+    }
+    
+    
+    mysqli_stmt_bind_param($stmt, "ssi", $startDate, $endDate, $afm);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    
+    
+    header("location: ../employee-suspension.php?error=none");
+    exit();
+    
+}
 
     
     

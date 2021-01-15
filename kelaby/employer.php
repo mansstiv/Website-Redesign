@@ -39,7 +39,7 @@ include_once 'header.php' // Include header of page
         </p>
       </li>
       <li class="one_third first list-layout">
-        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="index.php">
+        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="employee-suspension.php">
             Αναστολή σύμβασης εργασίας για εργαζόμενο</a></h6>
         <p class="font-size-15">
           Συμπλήρωσε τα απαραίτητα στοιχεία και δήλωσε άδεια ειδικού σκοπού εύκολα και γρήγορα.
