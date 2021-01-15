@@ -1678,3 +1678,75 @@ input[type="date"]:focus,
 input[type="date"]:active {
   cursor: pointer;
 }
+
+.appointment-btn .btn {
+  font-size: 17px;
+}
+
+.appointment-btn .btn:hover {
+  background-color: #2784b3;
+}
+
+.appointment-btn a:hover {
+  color: white;
+}
+.appointment-btn {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.steps-header .step {
+  border: 1px solid rgb(31, 31, 31);
+  padding: 13px;
+  float: left;
+  color: rgb(31, 31, 31);
+}
+
+.steps-header .step-active,
+.steps-header .step:hover {
+  background-color: #2283b4;
+  color: white;
+}
+
+.steps-header .step-active:hover {
+  background-color: #0b8fc7;
+}
+.submit-appointment .signupbtn {
+  margin-top: 70px;
+  background-color: #0b6c9c;
+  opacity: unset;
+  width: 35%;
+}
+
+.submit-appointment .signupbtn:hover {
+  opacity: unset;
+  background-color: #157daa;
+}
+
+.steps-header .first,
+.steps-header .second,
+.steps-header .third {
+  width: 33%;
+  text-align: center;
+}
+
+.footer-form {
+  margin-top: 50px;
+}
+
+.footer-form .prev {
+  float: left;
+}
+
+.footer-form .next {
+  float: right;
+}
+
+.footer-form a {
+  font-size: larger;
+}
+
+.larger-form input[type="text"] {
+  padding-bottom: 100px;
+  padding-right: 100px;
+}

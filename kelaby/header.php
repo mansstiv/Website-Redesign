@@ -98,7 +98,7 @@ Licence URI: http://www.os-templates.com/template-terms
                 <li><a href="#">Ανακοινωσεις</a></li>
                 <li><a class="drop" href="contact.php">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                     <ul>
-                        <li><a href="#">ΚΛΕΙΣΙΜΟ ΡΑΝΤΕΒΟΥ</a></li>
+                        <li><a href="appointment-step-1.php">ΚΛΕΙΣΙΜΟ ΡΑΝΤΕΒΟΥ</a></li>
                     </ul>
                 </li>
             </ul>

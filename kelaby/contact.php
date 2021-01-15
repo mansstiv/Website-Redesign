@@ -36,11 +36,38 @@ include_once 'header.php' // Include header of page
     <!-- ################################################################################################ -->
     <div class="content">
       <!-- ################################################################################################ -->
-      <p class="btmspace-50">
-        Το υπουργείο είναι καθημερινά <strong>ανοιχτό</strong> όλο το <strong>24ωρο</strong>,
-        από <strong>Τρίτη έως Παρασκευή</strong>. Το κοινό μπορεί να εξυπηρετηθεί από κοντά
-        μόνο κατόπιν <a class="hyperlink" href="#">κλεισίματος ραντεβού.</a>
-      </p>
+      <div class="group btmspace-50">
+
+        <div class="two_third first">
+          <p>
+            Το υπουργείο είναι καθημερινά <strong>ανοιχτό</strong> όλο το <strong>24ωρο</strong>,
+            από <strong>Τρίτη έως Παρασκευή</strong>. Το κοινό μπορεί να εξυπηρετηθεί από κοντά
+            μόνο κατόπιν κλεισίματος ραντεβού.
+          </p>
+        </div>
+        <div class="one_third">
+          <ul class=" nospace appointment-btn">
+            <li><a class="btn" href="appointment-step-1.php">Κλεισιμο ραντεβου</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- <div class="group btmspace-50">
+        <div class="contact-header">
+
+          <p style="margin-top:0px;">
+            Το υπουργείο είναι καθημερινά <strong>ανοιχτό</strong> όλο το <strong>24ωρο</strong>,
+            από <strong>Τρίτη έως Παρασκευή</strong>. Το κοινό μπορεί να εξυπηρετηθεί από κοντά
+            μόνο κατόπιν <a class="hyperlink" href="#">κλεισίματος ραντεβού.</a>
+          </p>
+          <div class="appointment-btn">
+            <ul class="nospace ">
+              <li><a class="btn" href="covid.php">Κλεισε ραντεβου</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr> -->
       <!-- ################################################################################################ -->
       <div class="group btmspace-50">
         <div class="one_half first">
