@@ -78,7 +78,7 @@ Licence URI: http://www.os-templates.com/template-terms
                 <li><a class="drop" href="employee.php">ΕΡΓΑΖΟΜΕΝΟΣ</a>
                     <ul>
                         <li><a href="employee-covid.php">ΔΥΝΑΤΟΤΗΤΕΣ ΚΑΙ COVID-2019</a></li>
-                        <li><a href="pages/sidebar-right.php">ΔΗΛΩΣΗ ΑΔΕΙΑΣ ΕΙΔΙΚΟΥ ΣΚΟΠΟΥ</a></li>
+                        <li><a href="employee-leave.php">ΔΗΛΩΣΗ ΑΔΕΙΑΣ ΕΙΔΙΚΟΥ ΣΚΟΠΟΥ</a></li>
                     </ul>
                 </li>
                 <!-- <li><a class="drop" href="pages/gallery.php">ΥΠΟΛΟΙΠΟΙ ΧΡΗΣΤΕΣ</a>
@@ -87,7 +87,7 @@ Licence URI: http://www.os-templates.com/template-terms
           <li><a href="pages/sidebar-right.php">ΑΝΕΡΓΟΣ</a></li>
         </ul>
       </li> -->
-                <li><a class="drop" href="contact.php">ΘΕΜΑΤΑ</a>
+                <li><a class="drop" href="topics.php">ΘΕΜΑΤΑ</a>
                     <ul>
                         <li><a href="covid.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>
                     </ul>

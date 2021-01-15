@@ -3,18 +3,18 @@ include_once 'header.php' // Include header of page
 ?>
 
 <head>
-    <title>Δήλωση αναστολής σύμβασης εργασίας εργαζομένων | Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
+    <title>Αίτηση χορήγησης άδειας ειδικού σκοπού | Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
 </head>
 
 
 <div class="bgded" style="background:white;">
     <div id="breadcrumb" class="hoc clear">
-        <h6 class="heading font-x3">Δήλωση αναστολής σύμβασης εργασίας</h6>
+        <h6 class="heading font-x3">Αίτηση χορήγησης άδειας ειδικού σκοπού</h6>
         <ul>
             <li><a style="color: #1c7aa8;" class="hyperlink" href="index.php">ΑΡΧΙΚΗ</a></li>
             <li><span>&#47;</span> </li>
             <li>
-                <p style="color: #363636;">Δηλωση αναστολης συμβασης εργασιας</p>
+                <p style="color: #363636;">Αιτηση χορηγησης αδειας ειδικου σκοπου</p>
             </li>
         </ul>
     </div>
@@ -29,8 +29,7 @@ include_once 'header.php' // Include header of page
                 if (!isset($_SESSION["username"])) {
                     echo "<p class = 'allign-center'>Πρέπει να <a class='hyperlink' href='login.php'>συνδεθείτε</a> πρώτα για να προχωρήσετε στην δήλωση !</p>";
                 } else {
-                    echo "<p>Παρακαλώ συμπλήρωστε την ακόλουθη φόρμα για αναστολή σύμβασης εργασίας εργαζομένου.
-                    Εάν θέλετε να δηλώσετε παραπάνω από έναν εργαζόμενο θα χρειαστεί να συμπληρώσετε ξανά την φόρμα.</p>";
+                    echo "<p>Παρακαλώ συμπλήρωστε στην ακόλουθη φόρμα το διάστημα της άδειας ειδικού σκοπού.</p>";
                     echo "<hr>";
                     echo "<label class='btmspace-15 required' for='usertype'>
                         <b>Ονοματεπώνυμο Εργαζομένου</b></label>";
