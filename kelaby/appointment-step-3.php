@@ -23,7 +23,7 @@ include_once 'header.php' // Include header of page
 
 <div class="wrapper row3">
     <main class="hoc mycontainer clear">
-        <form action="contact.php" method="post" style="border:1px solid #ccc">
+        <form action="report-success.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
 
                 <div class="group btmspace-50 steps-header">
