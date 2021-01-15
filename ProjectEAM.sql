@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: localhost
--- Χρόνος δημιουργίας: 14 Ιαν 2021 στις 16:24:37
+-- Χρόνος δημιουργίας: 15 Ιαν 2021 στις 08:17:58
 -- Έκδοση διακομιστή: 10.4.17-MariaDB
 -- Έκδοση PHP: 8.0.0
 
@@ -43,8 +43,10 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`userName`, `employerAfm`, `inSuspension_startDate`, `inSuspension_endDate`, `worksRemote_startDate`, `worksRemote_endDate`, `permission_startDate`, `permission_endDate`) VALUES
-('aaaa1234', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00'),
-('xfsafdsfa', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00');
+('dim', 123456789, '0000-00-00', '0000-00-00', '1111-11-11', '1111-11-11', '0000-00-00', '0000-00-00'),
+('ManosAnt', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00'),
+('Maria', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00'),
+('marios', 123456788, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -68,13 +70,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `isEmployer`, `password`, `afm`) VALUES
-(3, 'Vasiliss', 'Vazakos', 'vazakos', 'vazakos@gmail.com', 0, '$2y$10$r7yOlECLFC57Gb2hM7qNMu9TrxGE2NC6uCdrHr1sox1aDDFuGAOuq', 525252525),
-(6, 'asdsda', 'asddas', 'asffsdafdas', 'sdi1700152@di.uoa.gr', 1, '$2y$10$z93ZQZwVqpArQ6W8a9q18OP5drhJjV4b0jOf5cy05rs7HW3JCEiZq', 525252525),
-(7, 'ΧΡΙΣΤΙΝΑ-ΘΕΑΝΩ', 'ΚΥΛΑΦΗ', 'doYouEvenExist', 'te_ti_na@hotmail.com', 1, '$2y$10$HVP47zKhVLfwQ1IsrGfhKOySIF4kdLzWyxuTsS8u2z57jLp.Pfuka', 123456789),
-(8, 'sdfsdf', 'sdafdsaf', 'safasdf', 'aasdsdi1700040@di.uoa.gr', 0, '$2y$10$RuEWT0uo8B0Y1TKBp7J8EOxmzGtCcA.uT1dGsCD9wCIl/zFIpLLyq', 123123124),
-(9, 'dsaf', 'asdf', 'sdaf', 'sdi17000sdfsdf40@di.uoa.gr', 0, '$2y$10$0hJgsDx/55a4w3ovVsjx7uKzQieoNwYrf6p8zvJ/EGvAW7MJfXD5i', 123132342),
-(10, 'Georgios', 'kazakos', 'aaaa1234', 'sdi1700sfdafdafrdsrewqr32rfdw040@di.uoa.gr', 0, '$2y$10$hQXcsleANc9WjtEgFuJL0O1OS99eQaBitl4x74bP4FZr.m6ngn9Ha', 123123123),
-(11, 'Georgios1', 'kazakos', 'xfsafdsfa', 'vasilis_asdfdsafkazakos@icloud.com', 0, '$2y$10$q7PPMPMtaUfazE9pBu2CWu4QLplCuMyLpolPriu6jfdH2p44H6T7O', 123123123);
+(17, 'Georgios', 'kazakos', 'Gkaz', 'vasilis_kazakos@hotmail.com', 1, '$2y$10$IoS5YnOnKk.ShN7jaij7iO6w0VeX/qnlO/AmmkdyS7QlC30tkrquy', 123456789),
+(18, 'Manolis', 'Stivaktas', 'manos', 'vasilis_kazakos@icloud.com', 1, '$2y$10$hrmWNjNIYr38.GglHD5oZ.HIVA9AvS3D8rdhpyi99yWpDpff.FqgS', 123456788),
+(19, 'Dimitris', 'Verlekis', 'dim', 'some@gmail.com', 0, '$2y$10$oX9yNJ/jlsUEw9hLZxbqK.650o0F7EBgAsZWhiIp12bgkEjdgJ1gu', 123451234),
+(20, 'Maria', 'Georgioy', 'Maria', 'maria@gmail.com', 0, '$2y$10$QTY//pbAPG4xrtGCJbCvKejv//DY1TIu9SNnf1NMEOLneaEJ88bxK', 123123321),
+(21, 'Manolis', 'Antwnious', 'ManosAnt', 'sdi1700040@di.uoa.gr', 0, '$2y$10$MJRsIfFNaGztELuHi4P2geW/6iK3itJwMuDiQ9QoYZzygLxIP.C6a', 123412341),
+(22, 'Marios', 'Alexiou', 'marios', 'sdi1700152@di.uoa.gr', 0, '$2y$10$tjT0/ii2s1I7RhszqmkeqeDXk9h5j7Idm4CxWhDPrkwJHdQf7CPeW', 123444444);
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
@@ -100,7 +101,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT για πίνακα `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
