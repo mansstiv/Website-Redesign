@@ -127,7 +127,10 @@ include_once 'header.php' // Include header of page
                         echo "<p class='error-message'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
                     } else if ($_GET["error"] == "none") {
                         echo "<p class='ok-message'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
+                    }else if ($_GET["error"] == "afmexists"){
+                        echo "<p class='ok-message'>Το ΑΦΜ χρησιμοποιείται ήδη!</p>";
                     }
+                    
                 }
                 ?>
 
