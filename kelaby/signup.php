@@ -44,17 +44,20 @@ include_once 'header.php' // Include header of page
     <main class="hoc mycontainer clear">
         <form action="includes/signup.inc.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
-                <p>Παρακαλώ συμπλήρωσε την ακόλουθη φόρμα για να κάνεις εγγραφή.</p>
+                <p>Παρακαλώ συμπλήρωστε την ακόλουθη φόρμα για να κάνετε εγγραφή.
+                    Σε περίπτωση που ανήκετε στην κατηγορία του Εργαζομένου θα χρειαστεί να συμπληρώσετε
+                    ένα επιπλέον πεδίο, που είναι το ΑΦΜ του εργοδότη σας.
+                </p>
                 <hr>
                 <div class="two-in-one-row-form">
                     <div class="one-element-form margin-right">
                         <label class="required" for="firstname"><b>Όνομα</b></label>
-                        <input type="text" placeholder="Εισήγαγε το Όνομα" name="firstname" required>
+                        <input type="text" placeholder="Εισάγετε το Όνομα" name="firstname" required>
                     </div>
 
                     <div class="one-element-form">
                         <label class="required" for="lastname"><b>Επίθετο</b></label>
-                        <input type="text" placeholder="Εισήγαγε το Επίθετο" name="lastname" required>
+                        <input type="text" placeholder="Εισάγετε το Επίθετο" name="lastname" required>
                     </div>
                 </div>
 
@@ -62,26 +65,26 @@ include_once 'header.php' // Include header of page
                 <div class="two-in-one-row-form">
                     <div class="one-element-form margin-right">
                         <label class="required" for="uid"><b>Όνομα Χρήστη</b></label>
-                        <input type="text" placeholder="Εισήγαγε το Όνομα Χρήστη" name="uid" required>
+                        <input type="text" placeholder="Εισάγετε το Όνομα Χρήστη" name="uid" required>
                     </div>
 
                     <div class="one-element-form">
                         <label class="required" for="afm"><b>ΑΦΜ</b></label>
-                        <input type="text" placeholder="Εισήγαγε το ΑΦΜ" name="afm" required>
+                        <input type="text" placeholder="Εισάγετε το ΑΦΜ" name="afm" required>
                     </div>
                 </div>
 
 
                 <label class="required" for="email"><b>Ηλεκτρονική Διεύθυνση</b></label>
-                <input type="text" placeholder="Εισήγαγε την ηλεκτρονική διεύθυνση" name="email" required>
+                <input type="text" placeholder="Εισάγετε την ηλεκτρονική διεύθυνση" name="email" required>
 
-                <label class="required" for="psw"><b>Κωδικός</b></label>
-                <input type="password" placeholder="Εισήγαγε τον Κωδικό" name="psw" required>
+                <label class="required" for="psw"><b>Κωδικός Πρόσβασης</b></label>
+                <input type="password" placeholder="Εισάγετε τον Κωδικό Πρόσβασης" name="psw" required>
 
-                <label class="required" for="psw-repeat"><b>Επανάλαβε τον κωδικό</b></label>
-                <input type="password" placeholder="Επανέλαβε τον Κωδικό" name="psw-repeat" required>
+                <label class="required" for="psw-repeat"><b>Επανάληψη Κωδικού Πρόσβασης</b></label>
+                <input type="password" placeholder="Εισάγετε ξανά τον Κωδικό Πρόσβασης" name="psw-repeat" required>
 
-                <label class="required" for="usertype"><b>Διάλεξε την κατηγορία στην οποία ανήκεις</b></label>
+                <label class="required" for="usertype"><b>Διάλεξτε την κατηγορία στην οποία ανήκετε</b></label>
                 <div class="radio-buttons">
                     <div class="radio-button">
                         <input type="radio" name="usertype" value="employer" />
@@ -94,8 +97,8 @@ include_once 'header.php' // Include header of page
                     </div>
 
                     <div class="Box" style="display:none">
-                        <label class="required" for="employer-afm"><b>Συμπλήρωσε το ΑΦΜ του εργοδότη σου</b></label>
-                        <input type="text" placeholder="Συμπλήρωσε το ΑΦΜ του εργοδότη σου" name="employer-afm" required>
+                        <label class="required" for="employer-afm"><b>ΑΦΜ Εργοδότη</b></label>
+                        <input type="text" placeholder="Εισάγετε το ΑΦΜ του εργοδότη σας" name="employer-afm">
                     </div>
 
                 </div>

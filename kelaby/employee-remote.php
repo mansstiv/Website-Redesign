@@ -27,11 +27,13 @@ include_once 'header.php' // Include header of page
             <div class="signup-container">
                 <?php
                 if (!isset($_SESSION["username"])) {
-                    echo "<p>Πρέπει να <a class='hyperlink' href='login.php'>συνδεθείς</a> πρώτα για να προχωρήσεις στην δήλωση !</p>";
+                    echo "<p class = 'allign-center'>Πρέπει να <a class='hyperlink' href='login.php'>συνδεθείτε</a> πρώτα για να προχωρήσετε στην δήλωση !</p>";
                 } else {
-
+                    echo "<p>Παρακαλώ συμπλήρωστε την ακόλουθη φόρμα για την δήλωση εξ αποστάσεως εργασίας ενός εργαζομένου.
+                    Εάν θέλετε να δηλώσετε παραπάνω από έναν εργαζόμενο θα χρειαστεί να συμπληρώσετε ξανά την φόρμα.</p>";
+                    echo "<hr>";
                     echo "<label class='btmspace-15 required' for='usertype'>
-                        <b>Eπέλεξε τον εργαζόμενο για δήλωση εξ αποστάσεως εργασίας.</b></label>";
+                        <b>Ονοματεπώνυμο Εργαζομένου</b></label>";
 
                     $employeesNames = array();
                     $employeesAfm = array();
@@ -41,7 +43,7 @@ include_once 'header.php' // Include header of page
                         $employeesAfm[] = $row["afm"];
                     }
 
-                    echo "<select class = 'allign-center' name='form-employee-suspension'>";
+                    echo "<select class='btmspace-15' name='form-employee-suspension'>";
                     $i = 0;
                     foreach ($employeesNames as $row) {
                         echo "<option value=\"$employeesAfm[$i]\">$row</option>";
@@ -49,22 +51,21 @@ include_once 'header.php' // Include header of page
                         $i = $i + 1;
                     }
                     echo "</select>";
+                    echo "<div class='two-in-one-row-form'>";
+                    echo    "<div class='one-element-form margin-right'>";
+                    echo        "<label class='required btmspace-15' for='startRemoteDay'><b>Έναρξη εξ αποστάσεως εργασίας</b></label>";
+                    echo        "<input type='date' id='startRemoteDay' name='startRemoteDay' required>";
+                    echo    "</div>";
+                    echo    "<div class='one-element-form margin-right'>";
+                    echo        "<label class='required btmspace-15' for='endRemoteDay'><b>Λήξη εξ αποστάσεως εργασίας</b></label>";
+                    echo        "<input type='date' id='endRemoteDay' name='endRemoteDay' required>";
+                    echo    "</div>";
+                    echo "</div>";
+                    echo "<div class='clearfix'>";
+                    echo    "<button type='submit' name='submit' class='signupbtn'>Ολοκλήρωση Δήλωσης</button>";
+                    echo "</div>";
                 }
                 ?>
-                <div class="two-in-one-row-form">
-                    <div class="one-element-form margin-right">
-                        <label class="required" for="startRemoteDay"><b>Αρχή εξ αποστάσεως εργασίας</b></label>
-                        <input type="date" id="birthday" name="startRemoteDay" required>
-                    </div>
-
-                    <div class="one-element-form">
-                        <label class="required" for="endRemoteDay"><b>Τέλος εξ αποστάσεως εργασίας</b></label>
-                        <input type="date" id="endRemoteDay" name="endRemoteDay" required>
-                    </div>
-                </div>
-                <div class="clearfix">
-                    <button type="submit" name="submit" class="signupbtn">Εγγραφή</button>
-                </div>
             </div>
         </form>
 

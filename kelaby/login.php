@@ -27,26 +27,26 @@ include_once 'header.php' // Include header of page
         <form action="includes/login.inc.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
 
-                <p>Παρακαλώ συμπλήρωσε τα στοιχεία σου για να συνδεθείς.</p>
+                <p>Παρακαλώ συμπληρώστε τα στοιχεία σας για να συνδεθείτε.</p>
                 <hr>
 
-                <label for="uid"><b>Ηλεκτρονική Διεύθυνση / Όνομα Χρήστη</b></label>
-                <input type="text" placeholder="Εισήγαγε την Ηλεκτρονική Διεύθυνση ή το Όνομα Χρήστη" name="uid">
+                <label class="required" for="uid"><b>Ηλεκτρονική Διεύθυνση / Όνομα Χρήστη</b></label>
+                <input type="text" placeholder="Εισάγετε την Ηλεκτρονική Διεύθυνση ή το Όνομα Χρήστη" name="uid">
 
-                <label for="psw"><b>Κωδικός</b></label>
-                <input type="password" placeholder="Εισήγαγε τον Κωδικό" name="psw">
+                <label class="required" for="psw"><b>Κωδικός Πρόσβασης</b></label>
+                <input type="password" placeholder="Εισάγετε τον Κωδικό Πρόσβασης" name="psw">
 
                 <div class="clearfix">
                     <button type="submit" name="submit" class="signupbtn">Είσοδος</button>
                 </div>
                 <div class="allign-center">
-                    <p>Δεν έχεις κάνει εγγραφή; <a class="hyperlink" href="signup.php">Φτιάξε λογαριασμό</a>.</p>
+                    <p>Δεν έχεις κάνει εγγραφή; <a class="hyperlink" href="signup.php">Φτιάξτε λογαριασμό</a>.</p>
                 </div>
 
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == "emptyinput") {
-                        echo "<p class='error-message'>Συμπλήρωσε όλα τα πεδία !</p>";
+                        echo "<p class='error-message'>Συμπληρώστε όλα τα πεδία !</p>";
                     } else if ($_GET["error"] == "wronglogin") {
                         echo "<p class='error-message'>Μη έγκυρο όνομα χρήστη!</p>";
                     } else if ($_GET["error"] == "wrongloginpwd") {

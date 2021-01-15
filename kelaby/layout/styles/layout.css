@@ -1632,12 +1632,19 @@ input[type="radio"] {
   margin-left: 3px;
 }
 
-.radio-buttons .error-message {
+.error-message {
   margin-top: 25px;
   text-align: center;
   font-weight: bold;
   color: rgb(219, 2, 2);
 }
+
+/* .radio-buttons .error-message {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(219, 2, 2);
+} */
 
 .ok-message {
   margin-top: 25px;
@@ -1653,4 +1660,16 @@ input[type="radio"] {
 
 .btmspace-15 {
   margin-bottom: 15px;
+}
+
+input[type="date"] {
+  padding: 5px;
+  background-color: rgb(243, 242, 242);
+  border-radius: 5.5px;
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus,
+input[type="date"]:active {
+  cursor: pointer;
 }
