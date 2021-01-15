@@ -10,6 +10,7 @@ if (isset($_POST["submit"])) {
     $passwordRepeat = $_POST["psw-repeat"];
     $userType = $_POST["usertype"];
     $employerAfm = $_POST["employer-afm"];
+    $hasChildUnder12 = $_POST["hasChildUnder12"];
 
 
     require_once 'dbh.inc.php';
@@ -30,13 +31,13 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
-    
+
     if (invalidAfm($afm) !== false) {
         header("location: ../signup.php?error=invalideafm");
         exit();
     }
-    
-     
+
+
     if (passwordNotMatch($password, $passwordRepeat) !== false) {
         header("location: ../signup.php?error=pwddontmatch");
         exit();
@@ -46,24 +47,19 @@ if (isset($_POST["submit"])) {
         header("location: ../signup.php?error=usernametaken");
         exit();
     }
-    
-    if (afmExists($conn,$afm)!==false)
-    {
+
+    if (afmExists($conn, $afm) !== false) {
         header("location: ../signup.php?error=afmexists");
         exit();
     }
-    
-    
+
+
 
     if ($userType == "employer") {
-        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username,-1);
-        
-    }else{
-        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username,$employerAfm);
-
+        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, -1, -1);
+    } else {
+        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, $employerAfm, $hasChildUnder12);
     }
-    
-    
 } else {
     header("location: ../signup.php");
 }

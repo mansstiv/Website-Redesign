@@ -92,13 +92,26 @@ include_once 'header.php' // Include header of page
                     </div>
 
                     <div class="radio-button">
-                        <input type="radio" name="usertype" value="employee" checked />
+                        <input type="radio" name="usertype" value="employee" />
                         <label for="employer">Εργαζόμενος</label>
                     </div>
 
                     <div class="Box" style="display:none">
+                        <label class="required" for="usertype"><b>Έχετε παιδί κάτω των 12 ετών;</b></label>
+                        <div class="radio-buttons-inside">
+                            <div class="radio-button">
+                                <input type="radio" name="hasChildUnder12" value="yes" />
+                                <label for="yes">Ναι</label>
+                            </div>
+
+                            <div class="radio-button btmspace-15">
+                                <input type="radio" name="hasChildUnder12" value="no" />
+                                <label for="no">Οχι</label>
+                            </div>
+                        </div>
                         <label class="required" for="employer-afm"><b>ΑΦΜ Εργοδότη</b></label>
                         <input type="text" placeholder="Εισάγετε το ΑΦΜ του εργοδότη σας" name="employer-afm">
+
                     </div>
 
                 </div>
@@ -127,10 +140,9 @@ include_once 'header.php' // Include header of page
                         echo "<p class='error-message'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
                     } else if ($_GET["error"] == "none") {
                         echo "<p class='ok-message'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
-                    }else if ($_GET["error"] == "afmexists"){
+                    } else if ($_GET["error"] == "afmexists") {
                         echo "<p class='ok-message'>Το ΑΦΜ χρησιμοποιείται ήδη!</p>";
                     }
-                    
                 }
                 ?>
 

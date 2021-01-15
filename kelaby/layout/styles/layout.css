@@ -1624,6 +1624,7 @@ input[type="radio"] {
   margin-top: 20px;
 }
 
+.radio-buttons-inside label,
 .radio-buttons label {
   display: inline-block;
 }
@@ -1660,6 +1661,10 @@ input[type="radio"] {
 
 .btmspace-15 {
   margin-bottom: 15px;
+}
+
+.topspace-15 {
+  margin-top: 50px;
 }
 
 input[type="date"] {

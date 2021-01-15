@@ -18,69 +18,65 @@ function  emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $e
     return $result;
 }
 
-    
+
 function emptyInputDate($afm, $startDate, $endDate)
 {
     $result = false;
-    
-    if (empty($afm) || empty($startDate) || empty($endDate) ) {
+
+    if (empty($afm) || empty($startDate) || empty($endDate)) {
         $result = true;
     }
-    
 
-    
+
+
     return $result;
-    
 }
-    
-function updateRemoteDate($conn,$afm,$startDate,$endDate)
+
+function updateRemoteDate($conn, $afm, $startDate, $endDate)
 {
-    
+
     $sql = "update employee ,users SET employee.worksRemote_startDate = ? ,employee.worksRemote_endDate = ?
     WHERE   users.username=employee.userName AND users.afm=? ;";
     $stmt = mysqli_stmt_init($conn);
-    
+
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../employee-remote.php?error=dateFail");
         exit();
     }
-    
-    
+
+
     mysqli_stmt_bind_param($stmt, "ssi", $startDate, $endDate, $afm);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    
-    
+
+
     header("location: ../employee-remote.php?error=none");
     exit();
-    
-    
 }
-    
-function updateSuspensionDate($conn,$afm,$startDate,$endDate)
+
+function updateSuspensionDate($conn, $afm, $startDate, $endDate)
 {
     $sql = "update employee ,users SET employee.inSuspension_startDate = ? ,employee.inSuspension_endDate = ?
     WHERE   users.username=employee.userName AND users.afm=? ;";
     $stmt = mysqli_stmt_init($conn);
-    
+
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../employee-suspension.php?error=dateFail");
         exit();
     }
-    
-    
+
+
     mysqli_stmt_bind_param($stmt, "ssi", $startDate, $endDate, $afm);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    
-    
+
+
     header("location: ../employee-suspension.php?error=none");
     exit();
-    
 }
 
-    
-    
+
+
 function invalidUid($username)
 {
     $result = false;
@@ -112,42 +108,37 @@ function invalidAfm($afm)
     }
 
     return $result;
-
-
-    
-    
 }
-    
-function afmExists($conn,$afm)
+
+function afmExists($conn, $afm)
 {
-    
+
     $sql = "SELECT * FROM users WHERE afm= ?;";
     $stmt = mysqli_stmt_init($conn);
-    
+
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed");
         exit();
     }
-    
+
     mysqli_stmt_bind_param($stmt, "i", $afm);
     mysqli_stmt_execute($stmt);
-    
+
     $resultData = mysqli_stmt_get_result($stmt);
-    
+
     if ($row = mysqli_fetch_assoc($resultData)) {
         mysqli_stmt_close($stmt);
-        
+
         return $row;
     } else {
         $result = false;
-        
+
         mysqli_stmt_close($stmt);
-        
+
         return $result;
     }
-    
+
     mysqli_stmt_close($stmt);
-    
 }
 
 
@@ -187,7 +178,7 @@ function uidExists($conn, $username, $email)
     mysqli_stmt_close($stmt);
 }
 
-function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, $employerAfm)
+function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, $employerAfm, $hasChildUnder12)
 {
     $isEmployer = 0;
     if ($userType == "employer") {
@@ -210,15 +201,23 @@ function createUser($conn, $firstname, $email, $lastname, $password, $userType, 
     mysqli_stmt_close($stmt);
 
     if ($isEmployer == 0) {
-        $sql = "INSERT INTO employee (userName, employerAfm)
-        VALUES(?,?);";
+
+        if ($hasChildUnder12 == "yes") {
+            $hasChildUnder12 = 1;
+        } else {
+            $hasChildUnder12 = 0;
+        }
+
+        $sql = "INSERT INTO employee (userName, employerAfm, hasChildUnder12)
+        VALUES(?,?, ?);";
         $stmt = mysqli_stmt_init($conn);
+
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("location: ../signup.php?error=stmtfailed");
             exit();
         }
-        mysqli_stmt_bind_param($stmt, "si", $username, $employerAfm);
+        mysqli_stmt_bind_param($stmt, "sii", $username, $employerAfm, $hasChildUnder12);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
     }
