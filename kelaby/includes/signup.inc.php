@@ -30,11 +30,13 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
+    
     if (invalidAfm($afm) !== false) {
         header("location: ../signup.php?error=invalideafm");
         exit();
     }
-
+    
+     
     if (passwordNotMatch($password, $passwordRepeat) !== false) {
         header("location: ../signup.php?error=pwddontmatch");
         exit();
@@ -44,6 +46,14 @@ if (isset($_POST["submit"])) {
         header("location: ../signup.php?error=usernametaken");
         exit();
     }
+    
+    if (afmExists($conn,$afm)!==false)
+    {
+        header("location: ../signup.php?error=afmexists");
+        exit();
+    }
+    
+    
 
     if ($userType == "employer") {
         createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username,-1);
