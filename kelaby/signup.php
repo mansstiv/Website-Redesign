@@ -76,7 +76,7 @@ include_once 'header.php' // Include header of page
 
 
                 <label class="required" for="email"><b>Ηλεκτρονική Διεύθυνση</b></label>
-                <input type="text" placeholder="Εισάγετε την ηλεκτρονική διεύθυνση" name="email" required>
+                <input type="text" placeholder="Εισάγετε την Ηλεκτρονική Διεύθυνση" name="email" required>
 
                 <label class="required" for="psw"><b>Κωδικός Πρόσβασης</b></label>
                 <input type="password" placeholder="Εισάγετε τον Κωδικό Πρόσβασης" name="psw" required>
