@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Φιλοξενητής: localhost
--- Χρόνος δημιουργίας: 15 Ιαν 2021 στις 08:17:58
--- Έκδοση διακομιστή: 10.4.17-MariaDB
--- Έκδοση PHP: 8.0.0
+-- Host: localhost
+-- Generation Time: Jan 15, 2021 at 02:59 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Βάση δεδομένων: `ProjectEAM`
+-- Database: `ProjectEAM`
 --
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `employee`
+-- Table structure for table `employee`
 --
 
 CREATE TABLE `employee` (
@@ -35,23 +35,25 @@ CREATE TABLE `employee` (
   `worksRemote_startDate` date DEFAULT '0000-00-00',
   `worksRemote_endDate` date DEFAULT '0000-00-00',
   `permission_startDate` date DEFAULT '0000-00-00',
-  `permission_endDate` date DEFAULT '0000-00-00'
+  `permission_endDate` date DEFAULT '0000-00-00',
+  `hasChildUnder12` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Άδειασμα δεδομένων του πίνακα `employee`
+-- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`userName`, `employerAfm`, `inSuspension_startDate`, `inSuspension_endDate`, `worksRemote_startDate`, `worksRemote_endDate`, `permission_startDate`, `permission_endDate`) VALUES
-('dim', 123456789, '0000-00-00', '0000-00-00', '1111-11-11', '1111-11-11', '0000-00-00', '0000-00-00'),
-('ManosAnt', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00'),
-('Maria', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00'),
-('marios', 123456788, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00');
+INSERT INTO `employee` (`userName`, `employerAfm`, `inSuspension_startDate`, `inSuspension_endDate`, `worksRemote_startDate`, `worksRemote_endDate`, `permission_startDate`, `permission_endDate`, `hasChildUnder12`) VALUES
+('dim', 123456789, '0000-00-00', '0000-00-00', '1111-11-11', '1111-11-11', '0000-00-00', '0000-00-00', 0),
+('eirinistiv', 123456788, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 1),
+('ManosAnt', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 0),
+('Maria', 123456789, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 0),
+('marios', 123456788, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -66,7 +68,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Άδειασμα δεδομένων του πίνακα `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `isEmployer`, `password`, `afm`) VALUES
@@ -75,33 +77,34 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `isEmpl
 (19, 'Dimitris', 'Verlekis', 'dim', 'some@gmail.com', 0, '$2y$10$oX9yNJ/jlsUEw9hLZxbqK.650o0F7EBgAsZWhiIp12bgkEjdgJ1gu', 123451234),
 (20, 'Maria', 'Georgioy', 'Maria', 'maria@gmail.com', 0, '$2y$10$QTY//pbAPG4xrtGCJbCvKejv//DY1TIu9SNnf1NMEOLneaEJ88bxK', 123123321),
 (21, 'Manolis', 'Antwnious', 'ManosAnt', 'sdi1700040@di.uoa.gr', 0, '$2y$10$MJRsIfFNaGztELuHi4P2geW/6iK3itJwMuDiQ9QoYZzygLxIP.C6a', 123412341),
-(22, 'Marios', 'Alexiou', 'marios', 'sdi1700152@di.uoa.gr', 0, '$2y$10$tjT0/ii2s1I7RhszqmkeqeDXk9h5j7Idm4CxWhDPrkwJHdQf7CPeW', 123444444);
+(22, 'Marios', 'Alexiou', 'marios', 'sdi1700152@di.uoa.gr', 0, '$2y$10$tjT0/ii2s1I7RhszqmkeqeDXk9h5j7Idm4CxWhDPrkwJHdQf7CPeW', 123444444),
+(24, 'Ειρήνη', 'Στιβακτά', 'eirinistiv', 'eirinaki96@hotmail.com', 0, '$2y$10$HduSX8FGrI2/iuPsYFP5eemvpZ2FODAbzeyylR876WAb/7bfvvpoO', 999999999);
 
 --
--- Ευρετήρια για άχρηστους πίνακες
+-- Indexes for dumped tables
 --
 
 --
--- Ευρετήρια για πίνακα `employee`
+-- Indexes for table `employee`
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`userName`);
 
 --
--- Ευρετήρια για πίνακα `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT για άχρηστους πίνακες
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT για πίνακα `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
