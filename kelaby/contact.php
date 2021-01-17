@@ -78,18 +78,18 @@ include_once 'header.php' // Include header of page
           </ul>
           <h6 class="heading">Γενική Γραμματεία Κοινωνικών Ασφαλίσεων (Γ.Γ.Κ.Α.)</h6>
           <ul>
-            <li><i class="fa fa-phone"></i> 213-1516649</li>
-            <li><i class="fa fa-envelope-o"></i> ypakp@gmail.gr</li>
+            <li><i class="fa fa-phone"></i> 213-1523000</li>
+            <li><i class="fa fa-envelope-o"></i> ggka@ypakp.gr</li>
           </ul>
           <h6 class="heading">Σώμα Επιθεώρησης Εργασίας (Σ.ΕΠ.Ε.)</h6>
           <ul>
-            <li><i class="fa fa-phone"></i> 213-1516649</li>
-            <li><i class="fa fa-envelope-o"></i> ypakp@gmail.gr</li>
+            <li><i class="fa fa-phone"></i> 213-1577500</li>
+            <li><i class="fa fa-envelope-o"></i> sepe@ypakp.gr</li>
           </ul>
           <h6 class="heading">Γενική Γραμματεία Πρόνοιας</h6>
           <ul>
-            <li><i class="fa fa-phone"></i> 213-1516649</li>
-            <li><i class="fa fa-envelope-o"></i> ypakp@gmail.gr</li>
+            <li><i class="fa fa-phone"></i> 213-1588300</li>
+            <li><i class="fa fa-envelope-o"></i> ggpro@ypakp.gr</li>
           </ul>
         </div>
         <div class="one_half">

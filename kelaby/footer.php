@@ -23,7 +23,7 @@
                 </li>
                 <li>
                     <article>
-                        <h2 class="nospace font-x1"><a class="hyperlink" href="index.php">Υποστήριξη</a></h2>
+                        <h2 class="nospace font-x1"><a class="hyperlink" href="ministry-support.php">Υποστήριξη</a></h2>
                     </article>
                 </li>
                 <li>
