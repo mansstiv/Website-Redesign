@@ -27,6 +27,19 @@ include_once 'header.php' // Include header of page
         <form action="includes/login.inc.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
 
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "emptyinput") {
+                        echo "<p class='error-message btmspace-50'>Συμπληρώστε όλα τα πεδία !</p>";
+                    } else if ($_GET["error"] == "wronglogin") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρο όνομα χρήστη!</p>";
+                    } else if ($_GET["error"] == "wrongloginpwd") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρος κωδικός πρόσβασης!</p>";
+                    }
+                }
+                ?>
+
+
                 <p>Παρακαλώ συμπληρώστε τα στοιχεία σας για να συνδεθείτε.</p>
                 <hr>
 
@@ -39,21 +52,10 @@ include_once 'header.php' // Include header of page
                 <div class="clearfix">
                     <button type="submit" name="submit" class="signupbtn">Είσοδος</button>
                 </div>
+
                 <div class="allign-center">
                     <p>Δεν έχεις κάνει εγγραφή; <a class="hyperlink" href="signup.php">Φτιάξτε λογαριασμό</a>.</p>
                 </div>
-
-                <?php
-                if (isset($_GET["error"])) {
-                    if ($_GET["error"] == "emptyinput") {
-                        echo "<p class='error-message'>Συμπληρώστε όλα τα πεδία !</p>";
-                    } else if ($_GET["error"] == "wronglogin") {
-                        echo "<p class='error-message'>Μη έγκυρο όνομα χρήστη!</p>";
-                    } else if ($_GET["error"] == "wrongloginpwd") {
-                        echo "<p class='error-message'>Μη έγκυρος κωδικός πρόσβασης!</p>";
-                    }
-                }
-                ?>
 
             </div>
         </form>

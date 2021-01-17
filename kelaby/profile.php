@@ -146,6 +146,7 @@ include_once 'header.php' // Include header of page
                         <label class="required" for="afm"><b>ΑΦΜ</b></label>
                         <input type="text" value="<?php echo $_SESSION["afm"] ?>" name="afm" required>
                     </div>
+
                 </div>
 
                 <label class="required" for="email"><b>Ηλεκτρονική Διεύθυνση</b></label>

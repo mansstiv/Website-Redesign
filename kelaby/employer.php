@@ -32,17 +32,16 @@ include_once 'header.php' // Include header of page
     <ul class="nospace group services mylist">
       <li class="one_third first list-layout">
         <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="employee-remote.php">
-            Δήλωση εξ αποστάσεως εργασίας για εργαζόμενο</a></h6>
+            Εξ αποστάσεως εργασία</a></h6>
         <p class="font-size-15">
-          Μάθε για τις επιλογές που έχεις ως εργαζόμενος την εποχή της πανδημίας
-          και τι απαιτείται να κάνεις σε κάθε περίπτωση.
+          Δήλωσε έναν εργαζόμενο για εξ αποστάσεως εργασία ή κάνε άρση της συγκεκριμένης δήλωσης.
         </p>
       </li>
       <li class="one_third first list-layout">
         <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="employee-suspension.php">
-            Αναστολή σύμβασης εργασίας για εργαζόμενο</a></h6>
+            Αναστολή σύμβασης εργασίας</a></h6>
         <p class="font-size-15">
-          Συμπλήρωσε τα απαραίτητα στοιχεία και δήλωσε άδεια ειδικού σκοπού εύκολα και γρήγορα.
+          Δήλωσε την αναστολή σύμβασης εργασίας για έναν εργαζόμενο ή κάνε άρση της εν λόγω δήλωσης.
         </p>
       </li>
     </ul>
