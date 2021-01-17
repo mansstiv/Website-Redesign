@@ -79,6 +79,8 @@ Licence URI: http://www.os-templates.com/template-terms
                     <ul>
                         <li><a href="employee-covid.php">ΔΥΝΑΤΟΤΗΤΕΣ ΚΑΙ COVID-2019</a></li>
                         <li><a href="employee-leave.php">ΔΗΛΩΣΗ ΑΔΕΙΑΣ ΕΙΔΙΚΟΥ ΣΚΟΠΟΥ</a></li>
+                        <li><a href="employee-minimum-wage.php">ΚΑΤΩΤΑΤΟΣ ΜΙΣΘΟΣ</a></li>
+                        <li><a href="employee-oaed.php">ΠΡΟΓΡΑΜΜΑΤΑ ΟΑΕΔ</a></li>
                     </ul>
                 </li>
                 <!-- <li><a class="drop" href="pages/gallery.php">ΥΠΟΛΟΙΠΟΙ ΧΡΗΣΤΕΣ</a>
@@ -93,6 +95,14 @@ Licence URI: http://www.os-templates.com/template-terms
                         <li><a href="covid-protocol.php">ΠΡΩΤΟΚΟΛΛΟ ΑΝΤΙΜΕΤΩΠΙΣΗΣ ΚΡΟΥΣΜΑΤΟΣ</a></li>
                         <li><a href="covid-symptoms.php">ΚΥΡΙΑ ΣΥΜΠΤΩΜΑΤΑ</a></li>
                         <li><a href="covid-support.php">ΜΕΤΡΑ ΣΤΗΡΙΞΗΣ</a></li>
+                    </ul>
+                </li>
+                <li><a class="drop" href="ministry.php">ΥΠΟΥΡΓΕΙΟ</a>
+                    <ul>
+                        <li><a href="ministry-services.php">ΥΠΗΡΕΣΙΕΣ</a></li>
+                        <li><a href="ministry-people.php">ΔΙΟΙΚΗΣΗ</a></li>
+                        <li><a href="ministry-accessibility.php">ΠΡΟΣΒΑΣΙΜΟΤΗΤΑ</a></li>
+                        <li><a href="ministry-support.php">ΥΠΟΣΤΗΡΙΞΗ</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Ανακοινωσεις</a></li>

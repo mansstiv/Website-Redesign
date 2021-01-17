@@ -3,20 +3,20 @@ include_once 'header.php' // Include header of page
 ?>
 
 <head>
-  <title>Υπηρεσίες Υπουργείου | Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
+  <title>Υπηρεσίες | Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
 </head>
 
 
 <div class="bgded" style="background:white;">
   <div id="breadcrumb" class="hoc clear">
-    <h6 class="heading font-x3">Υπηρεσίες Υπουργείου</h6>
+    <h6 class="heading font-x3">Υπηρεσίες</h6>
     <ul>
       <li><a style="color: #1c7aa8;" class="hyperlink" href="index.php">ΑΡΧΙΚΗ</a></li>
       <li><span>&#47;</span> </li>
       <li><a style="color: #1c7aa8;" class="hyperlink" href="ministry.php">ΥΠΟΥΡΓΕΙΟ</a></li>
       <li><span>&#47;</span> </li>
       <li>
-        <p style="color: #363636;">Υπηρεσιες Υπουργειου</p>
+        <p style="color: #363636;">Υπηρεσιες</p>
       </li>
     </ul>
   </div>

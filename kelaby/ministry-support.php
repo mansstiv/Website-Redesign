@@ -26,7 +26,7 @@ include_once 'header.php' // Include header of page
   <main class="hoc mycontainer clear">
     <div class="content covid">
       <div class="group btmspace-50">
-         <p>Για την καλύτερη εξυπηρέτησή σας, δοκιμάστε να βρείτε το τμήμα που σας αφορά από τη<a style="color: #1c7aa8;" class="hyperlink" href="ministry-services.php">σχετική σελίδα</a>.</p>
+         <p>Για την καλύτερη εξυπηρέτησή σας, δοκιμάστε να βρείτε το τμήμα που σας αφορά από τη<a style="color: #1c7aa8;" class="hyperlink" href="ministry-services.php"> σχετική σελίδα</a>.</p>
          
 
     </div>
