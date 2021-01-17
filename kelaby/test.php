@@ -1,35 +1,24 @@
 <?php
+$username = "eirinistiv";
 
-require_once 'includes/dbh.inc.php';
+include_once 'includes/dbh.inc.php';
 
-
-$employerAfm = 123456789;
-
-$sql = "SELECT us1.firstname , us1.lastname, us1.afm
-FROM users us1,users us2 , employee
-WHERE (employee.userName = us1.username) AND (employee.employerAfm = us2.afm) AND (us2.afm=?);";
+$sql = "SELECT * FROM employee WHERE username = ?;";
 $stmt = mysqli_stmt_init($conn);
 
 if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: signup.php?error=stmtfailed");
+    header("location: ../signup.php?error=stmtfailed");
     exit();
 }
 
-mysqli_stmt_bind_param($stmt, "i", $employerAfm);
+mysqli_stmt_bind_param($stmt, "s", $username);
 mysqli_stmt_execute($stmt);
 
-
 $resultData = mysqli_stmt_get_result($stmt);
-$results = array();
 
-while ($row = mysqli_fetch_assoc($resultData)) {
-    $results[] = $row;
-}
-
+$row = mysqli_fetch_assoc($resultData);
 mysqli_stmt_close($stmt);
 
-foreach ($results as $row) {
-    // $employeesNames[] =  $row["firstname"] . ' ' . $row["lastname"];
-    // $employeesAfm[] = $row["afm"];
-    echo $row["afm"];
-}
+echo $row["userName"];
+
+return $row;

@@ -178,6 +178,46 @@ function uidExists($conn, $username, $email)
     mysqli_stmt_close($stmt);
 }
 
+function userDataSQL($conn, $username)
+{
+    $sql = "SELECT * FROM users WHERE username = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signup.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    $row = mysqli_fetch_assoc($resultData);
+    mysqli_stmt_close($stmt);
+    return $row;
+}
+
+function employeeDataSQL($conn, $username)
+{
+    $sql = "SELECT * FROM employee WHERE username = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signup.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    $row = mysqli_fetch_assoc($resultData);
+    mysqli_stmt_close($stmt);
+    return $row;
+}
+
 function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, $employerAfm, $hasChildUnder12)
 {
     $isEmployer = 0;
@@ -243,7 +283,7 @@ function  emptyInputLogin($username, $password)
 
 function getEmployeesForEmployer($conn, $employerAfm)
 {
-    $sql = "SELECT us1.firstname , us1.lastname, us1.afm
+    $sql = "SELECT us1.firstname , us1.lastname, us1.afm, us1.username
             FROM users us1,users us2 , employee
             WHERE (employee.userName = us1.username) AND (employee.employerAfm = us2.afm) AND (us2.afm=?);";
     $stmt = mysqli_stmt_init($conn);
@@ -292,7 +332,40 @@ function loginUser($conn, $username, $password)
         $_SESSION["firstname"] = $uidExists["firstname"];
         $_SESSION["lastname"] = $uidExists["lastname"];
         $_SESSION["employeesForEmployer"] = getEmployeesForEmployer($conn, $uidExists["afm"]);
+        $_SESSION["usertype"] = $uidExists["isEmployer"];
+        $_SESSION["afm"] = $uidExists["afm"];
+        $_SESSION["email"] = $uidExists["email"];
+        $_SESSION["userData"] = employeeDataSQL($conn, $_SESSION["username"]);
+
+        if ($_SESSION["usertype"] == 0) {
+            $_SESSION["employeeData"] = employeeDataSQL($conn, $_SESSION["username"]);
+        }
+
+
         header("location: ../index.php");
         exit();
     }
+}
+
+
+function Hire($conn, $employerAfm, $emplyeeAfm)
+{
+
+    $sql = "update employee,users  SET employee.employerAfm = ?
+    WHERE   users.username=employee.userName AND users.afm=? ;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../employee-suspension.php?error=dateFail");
+        exit();
+    }
+
+
+    mysqli_stmt_bind_param($stmt, "ss", $employerAfm, $emplyeeAfm);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+
+    header("location: ../employee-suspension.php?error=none");
+    exit();
 }

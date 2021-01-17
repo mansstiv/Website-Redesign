@@ -84,7 +84,7 @@ include_once 'header.php' // Include header of page
                 <label class="required" for="psw-repeat"><b>Επανάληψη Κωδικού Πρόσβασης</b></label>
                 <input type="password" placeholder="Εισάγετε ξανά τον Κωδικό Πρόσβασης" name="psw-repeat" required>
 
-                <label class="required" for="usertype"><b>Διάλεξτε την κατηγορία στην οποία ανήκετε</b></label>
+                <!-- <label class="required" for="usertype"><b>Διάλεξτε την κατηγορία στην οποία ανήκετε</b></label>
                 <div class="radio-buttons">
                     <div class="radio-button">
                         <input type="radio" name="usertype" value="employer" />
@@ -114,7 +114,7 @@ include_once 'header.php' // Include header of page
 
                     </div>
 
-                </div>
+                </div> -->
 
 
 

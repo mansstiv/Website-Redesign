@@ -44,34 +44,41 @@ include_once 'header.php' // Include header of page
                     </a>
                 </div>
 
-                <!-- <div class="two-in-one-row-form">
-                    <div class="one-element-form margin-right">
-                        <label class="required btmspace-15" for="startRemoteDay"><b>Ημ/νία Ραντεβού</b></label>
-                        <input type="date" id="startRemoteDay" name="startRemoteDay" required>
-                    </div>
+                <p>
+                    Αφού επιλέξετε την επιθυμιτή ημερομηνία για το ραντεβού, θα σας εμφανιστούν οι διαθέσιμες ώρες για
+                    εκείνη την μέρα, βάση του προγράμματος του υπουργείου και των υπόλοιπων προγραμματισμένων συναντήσεων.
+                    Κάθε ραντεβού έχει την χρονική διάρκεια των 30 λεπτών.
+                </p>
+                <hr>
+
+                <div class="two-in-one-row-form">
+
 
                     <div class="one-element-form">
-                        <label class="required btmspace-15" for="startRemoteDay"><b>Επλέξτε μία από τις διαθέσιμες ώρες</b></label>
+                        <label class="required btmspace-15" for="date-appointment"><b>Ημερομηνία Ραντεβού</b></label>
+                        <input type="date" id="date-appointment" name="date-appointment" required>
+                    </div>
+
+                    <div class="one-element-form margin-right">
+
+                        <label class="required btmspace-15" for="time-appointment">
+                            <b>Επιλέξτε μία από τις διαθέσιμες ώρες</b>
+                        </label>
+
                         <select>
-                            <option value="0">Select car:</option>
-                            <option value="1">Audi</option>
+                            <option value="0">Έναρξη: 9:15</option>
+                            <option value="0">Έναρξη: 10:15</option>
+                            <option value="0">Έναρξη: 11:30</option>
+                            <option value="0">Έναρξη: 14:30</option>
+                            <option value="0">Έναρξη: 15:30</option>
+                            <option value="0">Έναρξη: 18:15</option>
+
                         </select>
                     </div>
-                </div> -->
 
-                <label class="required" for="date-appointment"><b>Ημερομηνία Ραντεβού</b></label>
-                <input type="text" placeholder="Εισάγετε την ημερομηνία του ραντεβού (πχ. 01/01/1990)" name="date-appointment" required>
+                </div>
 
-                <label style="margin-bottom:0px;" class="required" for="startRemoteDay"><b>Επλέξτε μία από τις διαθέσιμες ώρες</b></label>
-                <p class="btmspace-15">Υποσημείωση: H διάρκεια για κάθε ραντεβού είναι 30 λεπτά</p>
-                <select>
-                    <option value="0">Έναρξη: 9:15</option>
-                    <option value="0">Έναρξη: 10:15</option>
-                    <option value="0">Έναρξη: 11:30</option>
-                    <option value="0">Έναρξη: 14:30</option>
-                    <option value="0">Έναρξη: 15:30</option>
-                    <option value="0">Έναρξη: 18:15</option>
-                </select>
+
                 <div class="clearfix submit-appointment">
                     <button type="submit" name="submit" class="signupbtn"><b>Επόμενο</b></button>
                 </div>
