@@ -38,7 +38,7 @@ include_once 'header.php' // Include header of page
         </p>
       </li>
       <li class="one_third first list-layout">
-        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="index.php">
+        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="employee-leave.php">
             Δήλωση άδειας ειδικού σκοπού</a></h6>
         <p class="font-size-15">
           Συμπλήρωσε τα απαραίτητα στοιχεία και δήλωσε άδεια ειδικού σκοπού εύκολα και γρήγορα.
@@ -46,23 +46,22 @@ include_once 'header.php' // Include header of page
       </li>
     </ul>
 
-    <!-- <ul class="nospace group services mylist">
-      <li class="one_third first">
-        <h6 class="heading font-x3 clear-text-transform"><a class="font-size-heading" href="employee-covid.php">
-            Δυνατότητες και COVID-2019</a></h6>
-        <p class="font-size-15"> 
-            Μάθε για τις επιλογές που έχεις ως εργαζόμενος την εποχή της πανδημίας
-            και τι απαιτείται να κάνεις σε κάθε περίπτωση.
+    <ul class="nospace group services mylist">
+      <li class="one_third first list-layout">
+        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="employee-minimum-wage.php">
+            Κατώτατος Μισθός</a></h6>
+        <p class="font-size-15">
+          Μάθε τι ισχύει σήμερα στην αγορά εργασίας σε ο,τι αφορά τις κατώτατες απολαβές σε μισθούς και ημερομίσθια.
         </p>
-      </li> 
-      <li class="one_third first">
-        <h6 class="heading font-x3 clear-text-transform"><a class="font-size-heading" href="index.php">
-            Δήλωση άδειας ειδικού σκοπού</a></h6>
-        <p class="font-size-15"> 
-            Συμπλήρωσε τα απαραίτητα στοιχεία και δήλωσε άδεια ειδικού σκοπού εύκολα και γρήγορα.
+      </li>
+      <li class="one_third first list-layout">
+        <h6 class="heading clear-text-transform top-margin-13"><a class="font-size-heading" href="employee-oaed.php">
+            Προγράμματα Ανεργίας</a></h6>
+        <p class="font-size-15">
+          Μάθε όλα τα νέα για τα τρέχοντα προγράμματα κατάρτισης και εύρεσης εργασίας του ΟΑΕΔ.
         </p>
-      </li>      
-    </ul> -->
+      </li>
+    </ul>
 
 
     <div class="clear btmspace-50"></div>

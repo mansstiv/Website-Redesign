@@ -112,8 +112,8 @@ include_once 'header.php' // Include header of page
         <h6 class="heading font-x3">Γρήγορη Πρόσβαση</h6>
       </li>
       <li class="one_quarter"><a href="covid.php"><i class="block btmspace-10 fas fa-4x fa-virus"></i>Πρόληψη & COVID-2019</a></li>
-      <li class="one_quarter"><a href="index.php"><i class="block btmspace-10 fa fa-4x fa-money-bill-wave"></i>Kατώτατος Μισθός</a></li>
-      <li class="one_quarter"><a href="index.php"><i class="block btmspace-10 fa fa-4x fa-laptop-code"></i>Τηλεργασία</a></li>
+      <li class="one_quarter"><a href="employee-minimum-wage.php"><i class="block btmspace-10 fa fa-4x fa-money-bill-wave"></i>Kατώτατος Μισθός</a></li>
+      <li class="one_quarter"><a href="employee-oaed.php"><i class="block btmspace-10 fa fa-4x fa-laptop-code"></i>Προγράμματα για Ανέργους</a></li>
     </ul>
   </section>
 </div>
