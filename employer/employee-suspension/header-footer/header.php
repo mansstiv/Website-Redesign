@@ -55,7 +55,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
     <div class="wrapper row1 ">
         <header id="header" class="hoc clear">
-            <a id="logo" href="../index.php">
+            <a id="logo" href="../../index.php">
                 <img src="../../images/demo/MainLogoSupportErgazom.gif" alt="Logo">
             </a>
         </header>

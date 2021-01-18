@@ -6,7 +6,6 @@ include_once 'header-footer/header.php' // Include header of page
     <title>Δήλωση αναστολής σύμβασης εργασίας | Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
 </head>
 
-
 <div class="bgded" style="background:white;">
     <div id="breadcrumb" class="hoc clear">
         <h6 class="heading font-x3">Δήλωση αναστολής σύμβασης εργασίας</h6>
