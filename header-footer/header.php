@@ -84,6 +84,9 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
+				<li><a href="pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
+				</li>
+
                 <li><a class="drop" href="covid/covid.php">COVID-19</a>
                     <ul>
                         <li><a href="covid/prevention.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>

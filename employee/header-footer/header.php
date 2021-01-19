@@ -80,6 +80,9 @@ Licence URI: http://www.os-templates.com/template-terms
                         <li><a href="../employee/oaed.php">ΠΡΟΓΡΑΜΜΑΤΑ ΟΑΕΔ</a></li>
                     </ul>
                 </li>
+                
+                <li><a href="../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
+				</li>
 
                 <li><a class="drop" href="../covid/covid.php">COVID-19</a>
                     <ul>

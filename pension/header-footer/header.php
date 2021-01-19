@@ -81,15 +81,15 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
-				<li><a href="../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
+				<li><a href="pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
 				</li>
-
-                <li><a class="drop" href="covid.php">COVID-19</a>
+				
+                <li><a class="drop" href="../covid/covid.php">COVID-19</a>
                     <ul>
-                        <li><a href="prevention.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>
-                        <li><a href="protocol.php">ΠΡΩΤΟΚΟΛΛΟ ΑΝΤΙΜΕΤΩΠΙΣΗΣ ΚΡΟΥΣΜΑΤΟΣ</a></li>
-                        <li><a href="symptoms.php">ΚΥΡΙΑ ΣΥΜΠΤΩΜΑΤΑ</a></li>
-                        <li><a href="support.php">ΜΕΤΡΑ ΣΤΗΡΙΞΗΣ</a></li>
+                        <li><a href="../covid/prevention.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>
+                        <li><a href="../covid/protocol.php">ΠΡΩΤΟΚΟΛΛΟ ΑΝΤΙΜΕΤΩΠΙΣΗΣ ΚΡΟΥΣΜΑΤΟΣ</a></li>
+                        <li><a href="../covid/symptoms.php">ΚΥΡΙΑ ΣΥΜΠΤΩΜΑΤΑ</a></li>
+                        <li><a href="../covid/support.php">ΜΕΤΡΑ ΣΤΗΡΙΞΗΣ</a></li>
                     </ul>
                 </li>
 

@@ -81,6 +81,9 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
+				<li><a href="../../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
+				</li>
+
                 <li><a class="drop" href="../../covid/covid.php">COVID-19</a>
                     <ul>
                         <li><a href="../../covid/prevention.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>
@@ -99,7 +102,7 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
-                <li><a href="../../under-construction.php">Ανακοινωσεις</a></li>
+                <li><a href="../../under-construction.php">NEA</a></li>
                 <li><a class="drop" href="../../contact/contact.php">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                     <ul>
                         <li><a href="../../contact/appointment-step-1.php">ΚΛΕΙΣΙΜΟ ΡΑΝΤΕΒΟΥ</a></li>
