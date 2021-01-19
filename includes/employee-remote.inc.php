@@ -32,9 +32,9 @@ if (isset($_POST["submit"])) {
     echo                "</p>";
     echo                "<p class='allign-center'>";
     if ($_SESSION["removeRemote"] == false)
-        echo                    "Γυρίστε στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-remote/employee-remote-declare.php>δήλωση εξ αποστάσεως εργασίας</a>.";
+        echo                    "Επιστροφή στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-remote/employee-remote-declare.php>δήλωση εξ αποστάσεως εργασίας</a>.";
     else if ($_SESSION["removeRemote"] == true)
-        echo                    "Γυρίστε στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-remote/employee-remote-remove.php>άρση εξ αποστάσεως εργασίας</a>.";
+        echo                    "Επιστροφή στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-remote/employee-remote-remove.php>άρση εξ αποστάσεως εργασίας</a>.";
 
     echo                "</p>";
     echo            "</div>";

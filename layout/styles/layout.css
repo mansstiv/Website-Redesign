@@ -1749,6 +1749,7 @@ input[type="date"]:active {
 .larger-form input[type="text"] {
   padding-bottom: 100px;
   padding-right: 100px;
+  margin-right: 0;
 }
 
 .edit-profile-container {
@@ -1760,13 +1761,3 @@ input[type="date"]:active {
   color: #09618d;
   background-color: #e2e2e2;
 }
-
-
-
-
-
-
-
-
-
-

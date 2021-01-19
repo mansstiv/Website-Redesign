@@ -31,9 +31,9 @@ if (isset($_POST["submit"])) {
     echo                "</p>";
     echo                "<p class='allign-center'>";
     if ($_SESSION["removeSuspension"] == false)
-        echo                    "Γυρίστε στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-suspension/employee-suspension-declare.php>δήλωση αναστολής σύμβασης εργασίας</a>.";
+        echo                    "Επιστροφή στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-suspension/employee-suspension-declare.php>δήλωση αναστολής σύμβασης εργασίας</a>.";
     else if ($_SESSION["removeSuspension"] == true)
-        echo                    "Γυρίστε στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-suspension/employee-suspension-remove.php>άρση αναστολής σύμβασης εργασίας</a>.";
+        echo                    "Επιστροφή στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a> ή προχωρήστε σε νέα <a class='hyperlink' href=../employer/employee-suspension/employee-suspension-remove.php>άρση αναστολής σύμβασης εργασίας</a>.";
 
     echo                "</p>";
     echo            "</div>";

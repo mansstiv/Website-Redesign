@@ -117,8 +117,13 @@ include_once 'header-footer/header.php' // Include header of page
                         echo    "<button style='width:100%; margin-top:30px;' type='submit' name='submit' class='signupbtn'>Ολοκλήρωση δήλωσης</button>";
                         echo "</div>";
                     } else {
-                        echo "<p class = 'allign-center'>Δεν έχεις το δικαίωμα να προχωρήσεις στην συγκεκριμένη δήλωση !</p>";
-                        echo "<p class = 'allign-center'>Επιστρέψτε στην <a class='hyperlink' href='../../index.php'>αρχική σελίδα</a></p>";
+                        if ($_SESSION["usertype"] == 1 && empty($_SESSION["employeesForEmployer"]) == true) {
+                            echo "<p class = 'allign-center'>Το σύστημα δεν βρίσκει εργαζόμενούς σου !</p>";
+                            echo "<p class = 'allign-center'>Επιστροφή στην <a class='hyperlink' href='../../index.php'>αρχική σελίδα</a>.</p>";
+                        } else if ($_SESSION["usertype"] == 0) {
+                            echo "<p class = 'allign-center'>Δεν έχεις το δικαίωμα να προχωρήσεις στην συγκεκριμένη δήλωση !</p>";
+                            echo "<p class = 'allign-center'>Επιστροφή στην <a class='hyperlink' href='../../index.php'>αρχική σελίδα</a>.</p>";
+                        }
                     }
                 }
                 ?>

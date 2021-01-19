@@ -1,18 +1,12 @@
 <?php
 
-function  emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat, $employerAfm)
+function  emptyInputSignup($firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat)
 {
 
     $result = false;
 
-    if (empty($userType) || empty($firstname) || empty($lastname) || empty($username) || empty($afm) || empty($email) || empty($password) || empty($passwordRepeat)) {
+    if (empty($firstname) || empty($lastname) || empty($username) || empty($afm) || empty($email) || empty($password) || empty($passwordRepeat)) {
         $result = true;
-    }
-
-    if ($userType == "employee") {
-        if (empty($employerAfm)) {
-            $result = false;
-        }
     }
 
     return $result;
@@ -64,6 +58,41 @@ function updateSuspensionDate($conn, $afm, $startDate, $endDate)
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 }
+
+function updatePermissionDate($conn, $afm, $startDate, $endDate)
+{
+    $sql = "UPDATE employee ,users SET employee.permission_startDate = ? ,employee.permission_endDate = ?
+            WHERE   users.username=employee.userName AND users.afm=? ;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../employee/leave.php?error=updateSuspensionDateFail");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssi", $startDate, $endDate, $afm);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+
+function changePassword($conn, $username, $password)
+{
+    $sql = "UPDATE users SET users.password = ?
+            WHERE   users.username=?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../profile/profile.php?error=stmtFailed");
+        exit();
+    }
+
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($stmt, "ss", $username, $hashedPassword);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+
 
 
 
@@ -208,15 +237,10 @@ function employeeDataSQL($conn, $username)
     return $row;
 }
 
-function createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, $employerAfm, $hasChildUnder12)
+function createUser($conn, $firstname, $email, $lastname, $password, $afm, $username)
 {
-    $isEmployer = 0;
-    if ($userType == "employer") {
-        $isEmployer = 1;
-    }
-
-    $sql = "INSERT INTO users (firstname, lastname, username, email, isEmployer, password, afm)
-    VALUES (?, ?, ?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO users (firstname, lastname, username, email, password, afm)
+            VALUES (?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -226,36 +250,9 @@ function createUser($conn, $firstname, $email, $lastname, $password, $userType, 
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssssisi", $firstname, $lastname, $username, $email, $isEmployer, $hashedPassword, $afm);
+    mysqli_stmt_bind_param($stmt, "sssssi", $firstname, $lastname, $username, $email, $hashedPassword, $afm);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-
-    if ($isEmployer == 0) {
-
-        if ($hasChildUnder12 == "yes") {
-            $hasChildUnder12 = 1;
-        } else {
-            $hasChildUnder12 = 0;
-        }
-
-        $sql = "INSERT INTO employee (userName, employerAfm, hasChildUnder12)
-        VALUES(?,?, ?);";
-        $stmt = mysqli_stmt_init($conn);
-
-
-        if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("location: ../profile/signup.php?error=stmtfailed");
-            exit();
-        }
-        mysqli_stmt_bind_param($stmt, "sii", $username, $employerAfm, $hasChildUnder12);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
-    }
-
-
-
-    header("location: ../profile/signup.php?error=none");
-    exit();
 }
 
 
@@ -325,7 +322,8 @@ function loginUser($conn, $username, $password)
         $_SESSION["usertype"] = $uidExists["isEmployer"];
         $_SESSION["afm"] = $uidExists["afm"];
         $_SESSION["email"] = $uidExists["email"];
-        $_SESSION["userData"] = employeeDataSQL($conn, $_SESSION["username"]);
+        $_SESSION["password"] = $pwdHashed;
+        // $_SESSION["userData"] = employeeDataSQL($conn, $_SESSION["username"]);
 
         if ($_SESSION["usertype"] == 0) {
             $_SESSION["employeeData"] = employeeDataSQL($conn, $_SESSION["username"]);
@@ -336,6 +334,7 @@ function loginUser($conn, $username, $password)
         exit();
     }
 }
+
 
 
 function Hire($conn, $employerAfm, $emplyeeAfm)

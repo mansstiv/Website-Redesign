@@ -31,7 +31,7 @@ include_once 'header-footer/header.php' // Include header of page
             include_once '../includes/functions.inc.php';
 
 
-            if ($_SESSION["usertype"] == 1 && empty($_SESSION["employeesForEmployer"]) !== true) {
+            if ($_SESSION["usertype"] == 1) {
 
                 echo "<h6 style='font-size: 30px;' class='heading font-x3'>Λίστα με τους εργαζόμενους σου</h6>";
                 echo "<hr style='border-color: #1c7aa8;'>";
@@ -76,7 +76,7 @@ include_once 'header-footer/header.php' // Include header of page
                 echo "</table>";
             } else if ($_SESSION["usertype"] == 0) {
 
-                echo "<h6 style='font-size: 30px;' class='heading font-x3'>Καταχωρήσεις από τον εργοδότη σου</h6>";
+                echo "<h6 style='font-size: 30px;' class='heading font-x3'>Η εργασιακή σου κατάσταση</h6>";
                 echo "<hr style='border-color: #1c7aa8;'>";
                 echo "<table class='allign-center btmspace-30'>";
                 echo "<tr>";
@@ -84,6 +84,8 @@ include_once 'header-footer/header.php' // Include header of page
                 echo "<th class='myth'>Λήξη Τηλεργασίας</th>";
                 echo "<th class='myth'>Έναρξη αναστολής εργασίας </th>";
                 echo "<th class='myth'>Λήξη αναστολής εργασίας</th>";
+                echo "<th class='myth'>Έναρξη άδειας ειδικού σκοπού</th>";
+                echo "<th class='myth'>Λήξη άδειας ειδικού σκοπού</th>";
                 echo "</tr>";
 
                 // Output a row
@@ -104,6 +106,14 @@ include_once 'header-footer/header.php' // Include header of page
                     echo "<td>-</td>";
                 else
                     echo "<td>{$_SESSION["employeeData"]["inSuspension_endDate"]}</td>";
+                if ($_SESSION["employeeData"]["permission_startDate"] == Null)
+                    echo "<td>-</td>";
+                else
+                    echo "<td>{$_SESSION["employeeData"]["permission_startDate"]}</td>";
+                if ($_SESSION["employeeData"]["permission_endDate"] == Null)
+                    echo "<td>-</td>";
+                else
+                    echo "<td>{$_SESSION["employeeData"]["permission_endDate"]}</td>";
                 echo "</tr>";
 
                 // Close the table
@@ -162,21 +172,31 @@ include_once 'header-footer/header.php' // Include header of page
 
         <div class="btmspace-50"></div>
 
-        <form action="../includes/change-code.inc.php" method="post">
+        <form action="../includes/changePassword.inc.php" method="post">
 
             <div class="edit-profile-container">
+
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "wrongCurrentPwd") {
+                        echo "<p class='error-message btmspace-50'>Λάθος τρέχων κωδικός πρόσβασης!</p>";
+                    } else if ($_GET["error"] == "pwddontmatch") {
+                        echo "<p class='error-message btmspace-50'>Οι νέοι κωδικοί πρόσβασης δεν ταιριάζουν !</p>";
+                    }
+                }
+                ?>
 
                 <h6 style="font-size: 30px;" class="heading font-x3">Αλλαγή κωδικού</h6>
                 <hr style="border-color: #1c7aa8;">
 
                 <label class="required" for="psw"><b>Τρέχων κωδικός πρόσβασης</b></label>
-                <input type="text" placeholder="Εισάγετε τον τρέχων κωδικό πρόσβασης" name="psw" required>
+                <input type="password" placeholder="Εισάγετε τον τρέχων κωδικό πρόσβασης" name="psw" required>
 
                 <label class="required" for="new-psw"><b>Νέος κωδικός πρόσβασης</b></label>
-                <input type="text" placeholder="Εισάγετε τον νέο κωδικό πρόσβασης" name="new-psw" required>
+                <input type="password" placeholder="Εισάγετε τον νέο κωδικό πρόσβασης" name="new-psw" required>
 
                 <label class="required" for="new-psw-repeat"><b>Επανάληψη νέου κωδικού πρόσβασης</b></label>
-                <input type="text" placeholder="Εισάγετε ξανά τον νέο κωδικό πρόσβασης" name="new-psw-repeat" required>
+                <input type="password" placeholder="Εισάγετε ξανά τον νέο κωδικό πρόσβασης" name="new-psw-repeat" required>
 
                 <div class="clearfix submit-appointment">
                     <button style="width:100%; margin-top:30px;" type="submit" name="submit" class="signupbtn">Αποθήκευση αλλαγών</button>

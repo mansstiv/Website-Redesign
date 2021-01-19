@@ -8,15 +8,11 @@ if (isset($_POST["submit"])) {
     $email = $_POST["email"];
     $password = $_POST["psw"];
     $passwordRepeat = $_POST["psw-repeat"];
-    $userType = $_POST["usertype"];
-    $employerAfm = $_POST["employer-afm"];
-    $hasChildUnder12 = $_POST["hasChildUnder12"];
-
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputSignup($userType, $firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat, $employerAfm) !== false) {
+    if (emptyInputSignup($firstname, $lastname, $username, $afm, $email, $password, $passwordRepeat) !== false) {
         header("location: ../profile/signup.php?error=emptyinput");
         exit();
     }
@@ -37,7 +33,6 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
-
     if (passwordNotMatch($password, $passwordRepeat) !== false) {
         header("location: ../profile/signup.php?error=pwddontmatch");
         exit();
@@ -53,13 +48,29 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
+    include_once 'header-footer/header.php'; // Include header of page
+    echo "<head>";
+    echo    "<title>Επιτυχής Εγγραφή | Yπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>";
+    echo  "</head>";
+
+    echo    "<div class='wrapper row3'>";
+    echo        "<main class='hoc mycontainer clear'>";
+    echo            "<div class='signup-container'>";
+    echo                "<p class='allign-center btmspace-50 ok-message'>";
+    echo                    "Η εγγραφή σου ολοκληρώθηκε με επιτυχία!";
+    echo                "</p>";
+    echo                "<p class='allign-center'>";
+    echo                    "Επιστροφή στην <a class='hyperlink' href=../index.php>αρχική σελίδα</a>.";
+    echo                "</p>";
+    echo            "</div>";
+    echo        "</main>";
+    echo    "</div>";
 
 
-    if ($userType == "employer") {
-        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, -1, -1);
-    } else {
-        createUser($conn, $firstname, $email, $lastname, $password, $userType, $afm, $username, $employerAfm, $hasChildUnder12);
-    }
+    createUser($conn, $firstname, $email, $lastname, $password, $afm, $username);
+
+    include_once 'header-footer/footer.php'; // Include footer of page
+
 } else {
     header("location: ../profile/signup.php");
 }

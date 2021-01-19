@@ -44,6 +44,31 @@ include_once 'header-footer/header.php' // Include header of page
     <main class="hoc mycontainer clear">
         <form action="../includes/signup.inc.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
+
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "emptyinput") {
+                        echo "<p class='error-message btmspace-50'>Συμπλήρωσε όλα τα πεδία !</p>";
+                    } else if ($_GET["error"] == "invaliduid") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρο όνομα χρήστη!</p>";
+                    } else if ($_GET["error"] == "invalidemail") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρη ηλεκτρονική διεύθυνση!</p>";
+                    } else if ($_GET["error"] == "invalideafm") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρο ΑΦΜ! Το ΑΦΜ πρέπει να αποτελείται απο 9 αριθμούς!</p>";
+                    } else if ($_GET["error"] == "pwddontmatch") {
+                        echo "<p class='error-message btmspace-50'>Οι κωδικοί δεν ταιριάζουν!</p>";
+                    } else if ($_GET["error"] == "usernametaken") {
+                        echo "<p class='error-message btmspace-50'>Το username ή το email χρησιμοποιείται ήδη!</p>";
+                    } else if ($_GET["error"] == "stmtfailed") {
+                        echo "<p class='error-message btmspace-50'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
+                        // } else if ($_GET["error"] == "none") {
+                        //     echo "<p class='ok-message btmspace-50'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
+                    } else if ($_GET["error"] == "afmexists") {
+                        echo "<p class='ok-message btmspace-50'>Το ΑΦΜ χρησιμοποιείται ήδη!</p>";
+                    }
+                }
+                ?>
+
                 <p>Παρακαλώ συμπλήρωστε την ακόλουθη φόρμα για να κάνετε εγγραφή.
                     Σε περίπτωση που ανήκετε στην κατηγορία του Εργαζομένου θα χρειαστεί να συμπληρώσετε
                     δύο επιπλέον πεδία.
@@ -84,67 +109,9 @@ include_once 'header-footer/header.php' // Include header of page
                 <label class="required" for="psw-repeat"><b>Επανάληψη Κωδικού Πρόσβασης</b></label>
                 <input type="password" placeholder="Εισάγετε ξανά τον Κωδικό Πρόσβασης" name="psw-repeat" required>
 
-                <!-- <label class="required" for="usertype"><b>Διάλεξτε την κατηγορία στην οποία ανήκετε</b></label>
-                <div class="radio-buttons">
-                    <div class="radio-button">
-                        <input type="radio" name="usertype" value="employer" />
-                        <label for="employer">Εργοδότης</label>
-                    </div>
-
-                    <div class="radio-button">
-                        <input type="radio" name="usertype" value="employee" />
-                        <label for="employer">Εργαζόμενος</label>
-                    </div>
-
-                    <div class="Box" style="display:none">
-                        <label class="required" for="usertype"><b>Έχετε παιδί κάτω των 12 ετών;</b></label>
-                        <div class="radio-buttons-inside">
-                            <div class="radio-button">
-                                <input type="radio" name="hasChildUnder12" value="yes" />
-                                <label for="yes">Ναι</label>
-                            </div>
-
-                            <div class="radio-button btmspace-15">
-                                <input type="radio" name="hasChildUnder12" value="no" />
-                                <label for="no">Οχι</label>
-                            </div>
-                        </div>
-                        <label class="required" for="employer-afm"><b>ΑΦΜ Εργοδότη</b></label>
-                        <input type="text" placeholder="Εισάγετε το ΑΦΜ του εργοδότη σας" name="employer-afm">
-
-                    </div>
-
-                </div> -->
-
-
-
                 <div class="clearfix">
                     <button type="submit" name="submit" class="signupbtn">Εγγραφή</button>
                 </div>
-
-                <?php
-                if (isset($_GET["error"])) {
-                    if ($_GET["error"] == "emptyinput") {
-                        echo "<p class='error-message'>Συμπλήρωσε όλα τα πεδία !</p>";
-                    } else if ($_GET["error"] == "invaliduid") {
-                        echo "<p class='error-message'>Μη έγκυρο όνομα χρήστη!</p>";
-                    } else if ($_GET["error"] == "invalidemail") {
-                        echo "<p class='error-message'>Μη έγκυρη ηλεκτρονική διεύθυνση!</p>";
-                    } else if ($_GET["error"] == "invalideafm") {
-                        echo "<p class='error-message'>Μη έγκυρο ΑΦΜ! Το ΑΦΜ πρέπει να αποτελείται απο 9 αριθμούς!</p>";
-                    } else if ($_GET["error"] == "pwddontmatch") {
-                        echo "<p class='error-message'>Οι κωδικοί δεν ταιριάζουν!</p>";
-                    } else if ($_GET["error"] == "usernametaken") {
-                        echo "<p class='error-message'>Το username ή το email χρησιμοποιείται ήδη!</p>";
-                    } else if ($_GET["error"] == "stmtfailed") {
-                        echo "<p class='error-message'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
-                    } else if ($_GET["error"] == "none") {
-                        echo "<p class='ok-message'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
-                    } else if ($_GET["error"] == "afmexists") {
-                        echo "<p class='ok-message'>Το ΑΦΜ χρησιμοποιείται ήδη!</p>";
-                    }
-                }
-                ?>
 
             </div>
 

@@ -24,7 +24,7 @@ include_once 'header-footer/header.php' // Include header of page
   <main class="hoc mycontainer clear">
     <ul class="list-covid-info ">
       <li>
-        <p style="font-size: 15px;">Ενημερώσου για <a class="hyperlink" href="../covid/covid.php">τα τελευταία μέτρα</a> σχετικά με την πανδημία και τον χώρο της εργασίας.</p>
+        <p style="font-size: 15px;">Ενημερώσου για <a class="hyperlink" href="../covid/prevention.php">τα τελευταία μέτρα</a> σχετικά με την πανδημία και τον χώρο της εργασίας.</p>
       </li>
     </ul>
 

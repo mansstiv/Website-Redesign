@@ -100,7 +100,7 @@ Licence URI: http://www.os-templates.com/template-terms
                         <li><a href="ministry/support.php">ΥΠΟΣΤΗΡΙΞΗ</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Ανακοινωσεις</a></li>
+                <li><a href="#">ΑΝΑΚΟΙΝΩΣΕΙΣ</a></li>
                 <li><a class="drop" href="contact/contact.php">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                     <ul>
                         <li><a href="contact/appointment-step-1.php">ΚΛΕΙΣΙΜΟ ΡΑΝΤΕΒΟΥ</a></li>

@@ -25,54 +25,79 @@ include_once 'header-footer/header.php' // Include header of page
 
 <div class="wrapper row3">
     <main class="hoc mycontainer clear">
-        <form action="../includes/employee-suspension.inc.php" method="post" style="border:1px solid #ccc">
-            <div class="signup-container">
+        <form action="../includes/employee-leave.inc.php" method="post">
+            <div class="edit-profile-container">
                 <?php
                 if (!isset($_SESSION["username"])) {
                     echo "<p class = 'allign-center'>Πρέπει να <a class='hyperlink' href='../profile/login.php'>συνδεθείτε</a> πρώτα για να προχωρήσετε στην δήλωση !</p>";
                 } else {
-                    echo "<p>Παρακαλώ συμπλήρωστε στην ακόλουθη φόρμα το διάστημα της άδειας ειδικού σκοπού.</p>";
-                    echo "<hr>";
-                    echo "<label class='btmspace-15 required' for='usertype'>
-                        <b>Ονοματεπώνυμο Εργαζομένου</b></label>";
 
-                    $employeesNames = array();
-                    $employeesAfm = array();
-
-                    foreach ($_SESSION["employeesForEmployer"] as $row) {
-                        $employeesNames[] =  $row["firstname"] . ' ' . $row["lastname"];
-                        $employeesAfm[] = $row["afm"];
+                    if (isset($_GET["error"])) {
+                        if ($_GET["error"] == "invalidAfm") {
+                            echo "<p class='btmspace-50 error-message'>Το ΑΦΜ που καταχώρησες δεν υπάρχει!</p>";
+                        }
                     }
 
-                    echo "<select class='btmspace-15' name='form-employee-suspension'>";
-                    $i = 0;
-                    foreach ($employeesNames as $row) {
-                        echo "<option value=\"$employeesAfm[$i]\">$row</option>";
-                        echo $employeesAfm[$i];
-                        $i = $i + 1;
+                    include_once '../../includes/dbh.inc.php';
+                    include_once '../../includes/functions.inc.php';
+
+
+                    if ($_SESSION["usertype"] == 0) {
+
+                        if ($_SESSION["employeeData"]["hasChildUnder12"] == 0) {
+                            echo "<p class = 'allign-center'>Δεν έχεις το δικαίωμα να προχωρήσεις στην συγκεκριμένη δήλωση μιας και δεν ανήκεις στην κατηγορία των γονέων με παιδιά κάτω των 12 ετών !</p>";
+                            echo "<p class = 'allign-center'>Επιστροφή στην <a class='hyperlink' href='../index.php'>αρχική σελίδα</a>.</p>";
+                        } else {
+
+                            echo "<div class=margin-right>";
+                            echo "<p class='btmspace-15'>Συμπλήρωσε την ακόλουθη φόρμα προκειμένου να πραγματοποιήσεις την αίτηση για έκδοση άδειας ειδικού σκοπού.</p>";
+                            echo "<hr class='btmspace-50' style='border-color: #1c7aa8;'>";
+                            echo "</div>";
+
+                            echo "<div class='margin-right'>";
+                            echo    "<label class='required btmspace-15' for='afm'><b>ΑΦΜ</b></label>";
+                            echo    "<input class='margin-right' type='text' placeholder='Εισάγετε το ΑΦΜ' id='afm' name='afm' required>";
+                            echo "</div>";
+
+                            echo "<div class='two-in-one-row-form'>";
+                            echo    "<div class='one-element-form margin-right'>";
+                            echo        "<label class='required btmspace-15' for='firstname'><b>Όνομα</b></label>";
+                            echo        "<input type='text' placeholder='Εισάγετε το Όνομα' id='firstname' name='firstname' required>";
+                            echo    "</div>";
+                            echo    "<div class='one-element-form margin-right'>";
+                            echo        "<label class='required btmspace-15' for='lastname'><b>Επίθετο</b></label>";
+                            echo        "<input type='text' placeholder='Εισάγετε το Επίθετο' id='lastname' name='lastname' required>";
+                            echo    "</div>";
+                            echo "</div>";
+
+                            echo "<div class='two-in-one-row-form'>";
+                            echo    "<div class='one-element-form margin-right'>";
+                            echo        "<label class='required btmspace-15' for='startPermissionDay'><b>Έναρξη άδειας ειδικού σκοπού</b></label>";
+                            echo        "<input type='text' placeholder='(π.χ 10/01/2020)' id='startPermissionDay' name='startPermissionDay' required>";
+                            echo    "</div>";
+                            echo    "<div class='one-element-form margin-right'>";
+                            echo        "<label class='required btmspace-15' for='endPermissionDay'><b>Λήξη άδειας ειδικού σκοπού</b></label>";
+                            echo        "<input type='text' placeholder='(π.χ 10/01/2020)' id='endPermissionDay' name='endPermissionDay' required>";
+                            echo    "</div>";
+                            echo "</div>";
+
+                            echo "<div class=' clearfix submit-appointment margin-right'>";
+                            echo    "<button style='width:100%; margin-top:30px;' type='submit' name='submit' class='signupbtn'>Ολοκλήρωση δήλωσης</button>";
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "<p class = 'allign-center'>Δεν έχεις το δικαίωμα να προχωρήσεις στην συγκεκριμένη δήλωση !</p>";
+                        echo "<p class = 'allign-center'>Επιστροφή στην <a class='hyperlink' href='../index.php'>αρχική σελίδα</a> .</p>";
                     }
-                    echo "</select>";
-                    echo "<div class='two-in-one-row-form'>";
-                    echo    "<div class='one-element-form margin-right'>";
-                    echo        "<label class='required btmspace-15' for='startRemoteDay'><b>Έναρξη αναστολής σύμβασης</b></label>";
-                    echo        "<input type='date' id='startRemoteDay' name='startRemoteDay' required>";
-                    echo    "</div>";
-                    echo    "<div class='one-element-form margin-right'>";
-                    echo        "<label class='required btmspace-15' for='endRemoteDay'><b>Λήξη αναστολής σύμβασης</b></label>";
-                    echo        "<input type='date' id='endRemoteDay' name='endRemoteDay' required>";
-                    echo    "</div>";
-                    echo "</div>";
-                    echo "<div class='clearfix'>";
-                    echo    "<button type='submit' name='submit' class='signupbtn'>Ολοκλήρωση Δήλωσης</button>";
-                    echo "</div>";
                 }
                 ?>
             </div>
         </form>
-
         <div class="clear btmspace-50"></div>
+
     </main>
 </div>
+
 
 <?php
 include_once 'header-footer/footer.php' // Include footer of page
