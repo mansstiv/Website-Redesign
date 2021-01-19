@@ -75,10 +75,24 @@ function updatePermissionDate($conn, $afm, $startDate, $endDate)
     mysqli_stmt_close($stmt);
 }
 
+function updateProfile($conn, $firstname, $lastname, $username, $afm, $email)
+{
+    $sql = "UPDATE users SET firstname=?, lastname=?, username=?, afm=?, email=? WHERE username=?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../profile/profile.php?error=stmtFailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sssiss", $firstname, $lastname, $username, $afm, $email, $_SESSION["username"]);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+
 function changePassword($conn, $username, $password)
 {
-    $sql = "UPDATE users SET users.password = ?
-            WHERE   users.username=?;";
+    $sql = "UPDATE users SET password=? WHERE username=?;";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -88,7 +102,7 @@ function changePassword($conn, $username, $password)
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ss", $username, $hashedPassword);
+    mysqli_stmt_bind_param($stmt, "ss", $hashedPassword, $username);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 }

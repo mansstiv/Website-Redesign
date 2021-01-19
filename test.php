@@ -1,26 +1,25 @@
 <?php
 $firstname = "Sergio";
 $lastname = "Araujo";
-$username = "sergio";
+$username = "araujo11";
 $email = "sergio@gmail.com";
-$password = "1q1q";
+$password = "1234";
 $afm = 191919191;
 
 include_once 'includes/dbh.inc.php';
 
-$sql = "INSERT INTO users (firstname, lastname, username, email, password, afm)
-VALUES (?, ?, ?, ?, ?, ?);";
+$sql = "UPDATE users SET password=? WHERE username=?;";
 $stmt = mysqli_stmt_init($conn);
 
 if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../profile/signup.php?error=stmtfailed");
+    header("location: ../test.php?error=stmtFailed");
     exit();
 }
 
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+// $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-mysqli_stmt_bind_param($stmt, "sssssi", $firstname, $lastname, $username, $email, $hashedPassword, $afm);
+mysqli_stmt_bind_param($stmt, "ss",  $password, $username);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
-echo "allgood";
+echo "skataaaa";

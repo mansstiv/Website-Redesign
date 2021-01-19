@@ -123,7 +123,7 @@ include_once 'header-footer/header.php' // Include header of page
             ?>
         </div>
 
-        <form action="../includes/profile.inc.php" method="post">
+        <form action="../includes/updateProfile.inc.php" method="post">
 
             <div class="edit-profile-container">
 
@@ -162,6 +162,30 @@ include_once 'header-footer/header.php' // Include header of page
                 <label class="required" for="email"><b>Ηλεκτρονική Διεύθυνση</b></label>
                 <input type="text" value="<?php echo $_SESSION["email"] ?>" name="email" required>
 
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "invaliduid") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρο όνομα χρήστη!</p>";
+                    } else if ($_GET["error"] == "invalidemail") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρη ηλεκτρονική διεύθυνση!</p>";
+                    } else if ($_GET["error"] == "invalideafm") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρο ΑΦΜ! Το ΑΦΜ πρέπει να αποτελείται απο 9 αριθμούς!</p>";
+                    } else if ($_GET["error"] == "usernametaken") {
+                        echo "<p class='error-message btmspace-50'>Το username ή το email χρησιμοποιείται ήδη!</p>";
+                    } else if ($_GET["error"] == "stmtfailed") {
+                        echo "<p class='error-message btmspace-50'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
+                    } else if ($_GET["error"] == "none") {
+                        echo "<p class='ok-message btmspace-50'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
+                    } else if ($_GET["error"] == "afmexists") {
+                        echo "<p class='error-message btmspace-50'>Το ΑΦΜ χρησιμοποιείται ήδη!</p>";
+                    } else if ($_GET["error"] == "stmtFailed") {
+                        echo "<p class='error-message btmspace-50'>Κάτι πήγε λάθος, προσπαθήστε ξανά!</p>";
+                    } else if ($_GET["error"] == "updateProfileNone") {
+                        echo "<p class='ok-message btmspace-50'>Οι αλλαγές αποθηκεύτηκαν επιτυχώς!</p>";
+                    }
+                }
+                ?>
+
                 <div class=" clearfix submit-appointment">
                     <button style="width:100%; margin-top:30px;" type="submit" name="submit" class="signupbtn">Αποθήκευση αλλαγών</button>
                 </div>
@@ -176,16 +200,6 @@ include_once 'header-footer/header.php' // Include header of page
 
             <div class="edit-profile-container">
 
-                <?php
-                if (isset($_GET["error"])) {
-                    if ($_GET["error"] == "wrongCurrentPwd") {
-                        echo "<p class='error-message btmspace-50'>Λάθος τρέχων κωδικός πρόσβασης!</p>";
-                    } else if ($_GET["error"] == "pwddontmatch") {
-                        echo "<p class='error-message btmspace-50'>Οι νέοι κωδικοί πρόσβασης δεν ταιριάζουν !</p>";
-                    }
-                }
-                ?>
-
                 <h6 style="font-size: 30px;" class="heading font-x3">Αλλαγή κωδικού</h6>
                 <hr style="border-color: #1c7aa8;">
 
@@ -197,6 +211,19 @@ include_once 'header-footer/header.php' // Include header of page
 
                 <label class="required" for="new-psw-repeat"><b>Επανάληψη νέου κωδικού πρόσβασης</b></label>
                 <input type="password" placeholder="Εισάγετε ξανά τον νέο κωδικό πρόσβασης" name="new-psw-repeat" required>
+
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "wrongCurrentPwd") {
+                        echo "<p class='error-message btmspace-50'>Λάθος τρέχων κωδικός πρόσβασης!</p>";
+                    } else if ($_GET["error"] == "pwddontmatch") {
+                        echo "<p class='error-message btmspace-50'>Οι νέοι κωδικοί πρόσβασης δεν ταιριάζουν !</p>";
+                    } else if ($_GET["error"] == "changeCodeNone") {
+                        echo "<p class='ok-message btmspace-50'>Ο νέος κωδικός πρόσβασης καταχωρήθηκε με επιτυχία !</p>";
+                    }
+                }
+                ?>
+
 
                 <div class="clearfix submit-appointment">
                     <button style="width:100%; margin-top:30px;" type="submit" name="submit" class="signupbtn">Αποθήκευση αλλαγών</button>

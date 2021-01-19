@@ -45,30 +45,6 @@ include_once 'header-footer/header.php' // Include header of page
         <form action="../includes/signup.inc.php" method="post" style="border:1px solid #ccc">
             <div class="signup-container">
 
-                <?php
-                if (isset($_GET["error"])) {
-                    if ($_GET["error"] == "emptyinput") {
-                        echo "<p class='error-message btmspace-50'>Συμπλήρωσε όλα τα πεδία !</p>";
-                    } else if ($_GET["error"] == "invaliduid") {
-                        echo "<p class='error-message btmspace-50'>Μη έγκυρο όνομα χρήστη!</p>";
-                    } else if ($_GET["error"] == "invalidemail") {
-                        echo "<p class='error-message btmspace-50'>Μη έγκυρη ηλεκτρονική διεύθυνση!</p>";
-                    } else if ($_GET["error"] == "invalideafm") {
-                        echo "<p class='error-message btmspace-50'>Μη έγκυρο ΑΦΜ! Το ΑΦΜ πρέπει να αποτελείται απο 9 αριθμούς!</p>";
-                    } else if ($_GET["error"] == "pwddontmatch") {
-                        echo "<p class='error-message btmspace-50'>Οι κωδικοί δεν ταιριάζουν!</p>";
-                    } else if ($_GET["error"] == "usernametaken") {
-                        echo "<p class='error-message btmspace-50'>Το username ή το email χρησιμοποιείται ήδη!</p>";
-                    } else if ($_GET["error"] == "stmtfailed") {
-                        echo "<p class='error-message btmspace-50'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
-                        // } else if ($_GET["error"] == "none") {
-                        //     echo "<p class='ok-message btmspace-50'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
-                    } else if ($_GET["error"] == "afmexists") {
-                        echo "<p class='ok-message btmspace-50'>Το ΑΦΜ χρησιμοποιείται ήδη!</p>";
-                    }
-                }
-                ?>
-
                 <p>Παρακαλώ συμπλήρωστε την ακόλουθη φόρμα για να κάνετε εγγραφή.
                     Σε περίπτωση που ανήκετε στην κατηγορία του Εργαζομένου θα χρειαστεί να συμπληρώσετε
                     δύο επιπλέον πεδία.
@@ -108,6 +84,31 @@ include_once 'header-footer/header.php' // Include header of page
 
                 <label class="required" for="psw-repeat"><b>Επανάληψη Κωδικού Πρόσβασης</b></label>
                 <input type="password" placeholder="Εισάγετε ξανά τον Κωδικό Πρόσβασης" name="psw-repeat" required>
+
+
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "emptyinput") {
+                        echo "<p class='error-message btmspace-50'>Συμπλήρωσε όλα τα πεδία !</p>";
+                    } else if ($_GET["error"] == "invaliduid") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρο όνομα χρήστη!</p>";
+                    } else if ($_GET["error"] == "invalidemail") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρη ηλεκτρονική διεύθυνση!</p>";
+                    } else if ($_GET["error"] == "invalideafm") {
+                        echo "<p class='error-message btmspace-50'>Μη έγκυρο ΑΦΜ! Το ΑΦΜ πρέπει να αποτελείται απο 9 αριθμούς!</p>";
+                    } else if ($_GET["error"] == "pwddontmatch") {
+                        echo "<p class='error-message btmspace-50'>Οι κωδικοί δεν ταιριάζουν!</p>";
+                    } else if ($_GET["error"] == "usernametaken") {
+                        echo "<p class='error-message btmspace-50'>Το username ή το email χρησιμοποιείται ήδη!</p>";
+                    } else if ($_GET["error"] == "stmtfailed") {
+                        echo "<p class='error-message btmspace-50'>Κάτι πήγε στραβά, προσπάθησε ξανά!</p>";
+                        // } else if ($_GET["error"] == "none") {
+                        //     echo "<p class='ok-message btmspace-50'>Η εγγραφή σου ολοκληρώθηκε με επιτυχία!</p>";
+                    } else if ($_GET["error"] == "afmexists") {
+                        echo "<p class='ok-message btmspace-50'>Το ΑΦΜ χρησιμοποιείται ήδη!</p>";
+                    }
+                }
+                ?>
 
                 <div class="clearfix">
                     <button type="submit" name="submit" class="signupbtn">Εγγραφή</button>
