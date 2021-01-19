@@ -32,7 +32,7 @@ include_once 'header-footer/header.php' // Include header of page
         </ul>
         <h6 class="heading top-margin-50">Υφυπουργός για Θέματα Κοινωνικής Ασφάλισης</h6>
         <ul>
-          <p>Παναγιώτης Τσακάλογλου</p>
+          <p>Παναγιώτης Τσακλόγλου</p>
         </ul>
         <h6 class="heading top-margin-50">Υφυπουργός για Θέματα Πρόνοιας & Κοινωνικής Αλληλεγγύης</h6>
         <ul>

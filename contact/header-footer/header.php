@@ -99,7 +99,7 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
-                <li><a href="../under-construction.php">Ανακοινωσεις</a></li>
+                <li><a href="../under-construction.php">ΝΕΑ</a></li>
                 <li><a class="drop" href="contact.php">ΕΠΙΚΟΙΝΩΝΙΑ</a>
                     <ul>
                         <li><a href="appointment-step-1.php">ΚΛΕΙΣΙΜΟ ΡΑΝΤΕΒΟΥ</a></li>

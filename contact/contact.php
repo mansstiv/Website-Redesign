@@ -33,10 +33,13 @@ include_once 'header-footer/header.php' // Include header of page
             από <strong>Τρίτη έως Παρασκευή</strong>. Το κοινό μπορεί να εξυπηρετηθεί από κοντά
             μόνο κατόπιν κλεισίματος ραντεβού.
           </p>
+          <p>Παρακαλείστε να ελέγξετε τις διαθέσιμες <a class="hyperlink" href="../ministry/services.php">υπηρεσίες</a> και να αναφέρετε στη φόρμα του ραντεβού σας την επιθυμητή υπηρεσία, 
+          καθώς και το λόγο της επίσκεψής σας.
+          </p>
         </div>
         <div class="one_third">
           <ul class=" nospace appointment-btn">
-            <li><a class="btn" href="appointment-step-1.php">Κλεισιμο ραντεβου</a></li>
+            <li><a class="btn" style="margin-top:25px;" href="appointment-step-1.php">Κλεισιμο ραντεβου</a></li>
           </ul>
         </div>
 

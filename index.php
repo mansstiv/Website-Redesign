@@ -41,7 +41,7 @@ include_once 'header-footer/header.php' // Include header of page
 </div>
 
 <div class="news-header">
-  <h6 class="heading font-x3"><a href="under-construction.php">ΑΝΑΚΟΙΝΩΣΕΙΣ</a></h6>
+  <h6 class="heading font-x3"><a href="under-construction.php">ΝΕΑ</a></h6>
 </div>
 
 <div class="wrapper row3">
