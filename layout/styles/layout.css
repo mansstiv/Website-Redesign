@@ -1761,3 +1761,7 @@ input[type="date"]:active {
   color: #09618d;
   background-color: #e2e2e2;
 }
+
+#mainav .active a {
+  color: rgb(15, 95, 170);
+}

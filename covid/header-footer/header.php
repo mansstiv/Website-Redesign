@@ -64,7 +64,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="wrapper row2">
         <nav id="mainav" class="hoc clear">
             <ul class="clear">
-                <li class="active"><a href="../index.php">Αρχικη</a></li>
+                <li><a href="../index.php">Αρχικη</a></li>
 
                 <li><a class="drop" href="../employer/employer.php">ΕΡΓΟΔΟΤΗΣ</a>
                     <ul>
@@ -81,10 +81,10 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
-				<li><a href="../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
-				</li>
+                <li><a href="../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
+                </li>
 
-                <li><a class="drop" href="covid.php">COVID-19</a>
+                <li class="active"><a class="drop" href="covid.php">COVID-19</a>
                     <ul>
                         <li><a href="prevention.php">ΠΡΟΛΗΨΗ & COVID-2019</a></li>
                         <li><a href="protocol.php">ΠΡΩΤΟΚΟΛΛΟ ΑΝΤΙΜΕΤΩΠΙΣΗΣ ΚΡΟΥΣΜΑΤΟΣ</a></li>

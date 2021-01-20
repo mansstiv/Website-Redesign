@@ -64,9 +64,9 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="wrapper row2">
         <nav id="mainav" class="hoc clear">
             <ul class="clear">
-                <li class="active"><a href="../../index.php">Αρχικη</a></li>
+                <li><a href="../../index.php">Αρχικη</a></li>
 
-                <li><a class="drop" href="../employer.php">ΕΡΓΟΔΟΤΗΣ</a>
+                <li class="active"><a class="drop" href="../employer.php">ΕΡΓΟΔΟΤΗΣ</a>
                     <ul>
                         <li><a href="../employee-remote/employee-remote.php">ΕΞ ΑΠΟΣΤΑΣΕΩΣ ΕΡΓΑΣΙΑ</a></li>
                         <li><a href="employee-suspension.php">ΑΝΑΣΤΟΛΗ ΣΥΜΒΑΣΗΣ ΕΡΓΑΣΙΑΣ</a></li>
@@ -81,8 +81,8 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
-				<li><a href="../../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
-				</li>
+                <li><a href="../../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
+                </li>
 
                 <li><a class="drop" href="../../covid/covid.php">COVID-19</a>
                     <ul>

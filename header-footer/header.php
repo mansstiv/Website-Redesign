@@ -11,7 +11,7 @@ Author URI: http://www.os-templates.com/
 Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 -->
-<html>
+<html lang="la">
 
 <head>
     <!-- title will be writen in each page -->
@@ -59,7 +59,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="wrapper row1 ">
         <header id="header" class="hoc clear">
             <a id="logo" href="index.php">
-                <img src="images/demo/MainLogoSupportErgazom.gif" alt="Logo">
+                <img src="images/demo/MainLogoSupportErgazom.gif" alt="Logo of website">
             </a>
         </header>
     </div>
@@ -84,8 +84,8 @@ Licence URI: http://www.os-templates.com/template-terms
                     </ul>
                 </li>
 
-				<li><a href="pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
-				</li>
+                <li><a href="pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
+                </li>
 
                 <li><a class="drop" href="covid/covid.php">COVID-19</a>
                     <ul>

@@ -64,7 +64,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="wrapper row2">
         <nav id="mainav" class="hoc clear">
             <ul class="clear">
-                <li class="active"><a href="../index.php">Αρχικη</a></li>
+                <li><a href="../index.php">Αρχικη</a></li>
 
                 <li><a class="drop" href="../employer/employer.php">ΕΡΓΟΔΟΤΗΣ</a>
                     <ul>
@@ -72,7 +72,7 @@ Licence URI: http://www.os-templates.com/template-terms
                         <li><a href="../employer/employee-suspension/employee-suspension.php">ΑΝΑΣΤΟΛΗ ΣΥΜΒΑΣΗΣ ΕΡΓΑΣΙΑΣ</a></li>
                     </ul>
                 </li>
-                <li><a class="drop" href="../employee/employee.php">ΕΡΓΑΖΟΜΕΝΟΣ</a>
+                <li class="active"><a class="drop" href="../employee/employee.php">ΕΡΓΑΖΟΜΕΝΟΣ</a>
                     <ul>
                         <li><a href="../employee/covid.php">ΔΥΝΑΤΟΤΗΤΕΣ ΚΑΙ COVID-2019</a></li>
                         <li><a href="../employee/leave.php">ΔΗΛΩΣΗ ΑΔΕΙΑΣ ΕΙΔΙΚΟΥ ΣΚΟΠΟΥ</a></li>
@@ -80,9 +80,9 @@ Licence URI: http://www.os-templates.com/template-terms
                         <li><a href="../employee/oaed.php">ΠΡΟΓΡΑΜΜΑΤΑ ΟΑΕΔ</a></li>
                     </ul>
                 </li>
-                
+
                 <li><a href="../pension/pension.php">ΣΥΝΤΑΞΙΟΥΧΟΣ</a>
-				</li>
+                </li>
 
                 <li><a class="drop" href="../covid/covid.php">COVID-19</a>
                     <ul>
