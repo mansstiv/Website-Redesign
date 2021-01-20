@@ -62,7 +62,7 @@ function updateSuspensionDate($conn, $afm, $startDate, $endDate)
 function updatePermissionDate($conn, $afm, $startDate, $endDate)
 {
     $sql = "UPDATE employee ,users SET employee.permission_startDate = ? ,employee.permission_endDate = ?
-            WHERE   users.username=employee.userName AND users.afm=? ;";
+    WHERE   users.username=employee.userName AND users.afm=? ;";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {

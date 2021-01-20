@@ -87,7 +87,7 @@ include_once 'header-footer/header.php' // Include header of page
                         }
                         echo "</table>";
 
-                        echo "<h6 style='font-size: 30px;' class='heading font-x3'>Δήλωση αναστολής σύμβασης εργασίας ενός εργαζομένου</h6>";
+                        echo "<h6 style='font-size: 30px;' class='heading font-x3'>Δήλωση αναστολής σύμβασης εργασίας εργαζομένου</h6>";
                         echo "<hr style='border-color: #1c7aa8;'>";
                         echo "<p class='btmspace-50'>Με βάση την παραπάνω λίστα, συμπλήρωσε την ακόλουθη φόρμα για τον εργαζόμενο που θες να δηλώσεις σε αναστολή.</p>";
 

@@ -32,7 +32,7 @@ if (isset($_POST["submit"])) {
     echo        "</main>";
     echo    "</div>";
 
-    updatePermissionDate($conn, $afm, date('Y-m-d', strtotime($startDate)), date('Y-m-d', strtotime($endDate)));
+    updatePermissionDate($conn, $afm, $startDate, $endDate);
 }
 
 include_once 'header-footer/footer.php'; // Include footer of page

@@ -11,7 +11,7 @@ Author URI: http://www.os-templates.com/
 Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 -->
-<html>
+<html lang="la">
 
 <head>
     <script src="https://kit.fontawesome.com/c1dcc21947.js" crossorigin="anonymous"></script>
@@ -56,7 +56,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="wrapper row1 ">
         <header id="header" class="hoc clear">
             <a id="logo" href="../index.php">
-                <img src="../images/demo/MainLogoSupportErgazom.gif" alt="Logo">
+                <img src="../images/demo/MainLogoSupportErgazom.gif" alt="Logo of website">
             </a>
         </header>
     </div>

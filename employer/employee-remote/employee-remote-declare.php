@@ -89,7 +89,7 @@ include_once 'header-footer/header.php' // Include header of page
                         }
                         echo "</table>";
 
-                        echo "<h6 style='font-size: 30px;' class='heading font-x3'>Δήλωση εξ αποστάσεως εργασίας ενός εργαζομένου</h6>";
+                        echo "<h6 style='font-size: 30px;' class='heading font-x3'>Δήλωση εξ αποστάσεως εργασίας εργαζομένου</h6>";
                         echo "<hr style='border-color: #1c7aa8;'>";
                         echo "<p class='btmspace-50'>Με βάση την παραπάνω λίστα, συμπλήρωσε την ακόλουθη φόρμα για τον εργαζόμενο που θες να δηλώσεις σε τηλεργασία.</p>";
 
@@ -106,8 +106,8 @@ include_once 'header-footer/header.php' // Include header of page
                         echo        "<input type='text' placeholder='(π.χ 10/01/2020)' id='startRemoteDay' name='startRemoteDay' required>";
                         echo    "</div>";
                         echo    "<div class='one-element-form margin-right'>";
-                        echo        "<label class='required btmspace-15' for='endSuspensionDay'><b>Λήξη εξ αποστάσεως εργασίας</b></label>";
-                        echo        "<input type='text' placeholder='(π.χ 10/01/2020)' id='endSuspensionDay' name='endSuspensionDay' required>";
+                        echo        "<label class='required btmspace-15' for='endRemoteDay'><b>Λήξη εξ αποστάσεως εργασίας</b></label>";
+                        echo        "<input type='text' placeholder='(π.χ 10/01/2020)' id='endRemoteDay' name='endRemoteDay' required>";
                         echo    "</div>";
                         echo "</div>";
 

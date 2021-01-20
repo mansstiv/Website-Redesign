@@ -12,7 +12,7 @@ include_once 'header-footer/header.php' // Include header of page
   <div id="breadcrumb" class="hoc clear">
     <h6 class="heading font-x3">Επικοινωνία</h6>
     <ul>
-      <li><a style="color: #1c7aa8;" class="hyperlink" href="../index.php">ΑΡΧΙΚΗ</a></li>
+      <li><a style="color: rgb(15, 95, 170);" class="hyperlink" href="../index.php">ΑΡΧΙΚΗ</a></li>
       <li><span>&#47;</span> </li>
       <li>
         <p style="color: #363636;">ΕΠΙΚΟΙΝΩΝΙΑ</p>
@@ -33,8 +33,8 @@ include_once 'header-footer/header.php' // Include header of page
             από <strong>Τρίτη έως Παρασκευή</strong>. Το κοινό μπορεί να εξυπηρετηθεί από κοντά
             μόνο κατόπιν κλεισίματος ραντεβού.
           </p>
-          <p>Παρακαλείστε να ελέγξετε τις διαθέσιμες <a class="hyperlink" href="../ministry/services.php">υπηρεσίες</a> και να αναφέρετε στη φόρμα του ραντεβού σας την επιθυμητή υπηρεσία, 
-          καθώς και το λόγο της επίσκεψής σας.
+          <p>Παρακαλείστε να ελέγξετε τις διαθέσιμες <a class="hyperlink" href="../ministry/services.php">υπηρεσίες</a> και να αναφέρετε στη φόρμα του ραντεβού σας την επιθυμητή υπηρεσία,
+            καθώς και το λόγο της επίσκεψής σας.
           </p>
         </div>
         <div class="one_third">
@@ -47,35 +47,34 @@ include_once 'header-footer/header.php' // Include header of page
 
       <div class="group btmspace-50">
         <div class="one_half first">
-          <h6 style="margin-top:0px;" class="heading">Κεντρικές Υπηρεσίες</h6>
+          <h1 style="margin-top:0px;" class="heading">Κεντρικές Υπηρεσίες</h1>
           <ul>
             <li><i class="fa fa-phone"></i> 213-1516649</li>
             <li><i class="fa fa-envelope-o"></i> pliroforisi-politi@ypakp.gr</li>
           </ul>
-          <h6 class="heading">Γενική Γραμματεία Κοινωνικών Ασφαλίσεων (Γ.Γ.Κ.Α.)</h6>
+          <h1 class="heading">Γενική Γραμματεία Κοινωνικών Ασφαλίσεων (Γ.Γ.Κ.Α.)</h1>
           <ul>
             <li><i class="fa fa-phone"></i> 213-1523000</li>
             <li><i class="fa fa-envelope-o"></i> ggka@ypakp.gr</li>
           </ul>
-          <h6 class="heading">Σώμα Επιθεώρησης Εργασίας (Σ.ΕΠ.Ε.)</h6>
+          <h1 class="heading">Σώμα Επιθεώρησης Εργασίας (Σ.ΕΠ.Ε.)</h1>
           <ul>
             <li><i class="fa fa-phone"></i> 213-1577500</li>
             <li><i class="fa fa-envelope-o"></i> sepe@ypakp.gr</li>
           </ul>
-          <h6 class="heading">Γενική Γραμματεία Πρόνοιας</h6>
+          <h1 class="heading">Γενική Γραμματεία Πρόνοιας</h1>
           <ul>
             <li><i class="fa fa-phone"></i> 213-1588300</li>
             <li><i class="fa fa-envelope-o"></i> ggpro@ypakp.gr</li>
           </ul>
         </div>
         <div class="one_half">
-          <img src="../images/demo/Screenshot_2021-01-10 Google Maps.png" alt="Map with location of 
-                                                                Ministry of Labour and Social Affairs">
+          <img src="../images/demo/Screenshot_2021-01-10 Google Maps.png" alt="Map with location of Ministry of Labour and Social Affairs">
           <div class="address">
             <i class="fa fa-map-marker"></i>
             Σταδίου 29, Αθήνα, 105 59
           </div>
-          <h6 class="heading">Πρόσβαση</h6>
+          <h1 class="heading">Πρόσβαση</h1>
           <p>Το υπουργείο απέχει 260m από τον σταθμό του Πανεπιστημίου (Μετρό Αθήνας).</p>
         </div>
       </div>

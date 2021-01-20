@@ -1,7 +1,7 @@
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
         <div class="one_third first">
-            <h6 class="heading">Επικοινωνία</h6>
+            <h1 class="heading">Επικοινωνία</h1>
             <ul class="nospace btmspace-30 linklist contact">
                 <li><i class="fa fa-map-marker"></i>
                     <address>
@@ -14,7 +14,7 @@
 
         </div>
         <div class="one_third">
-            <h6 class="heading">Υπηρεσίες και Προσβασιμότητα</h6>
+            <h1 class="heading">Υπηρεσίες και Προσβασιμότητα</h1>
             <ul class="nospace linklist">
                 <li>
                     <article>
@@ -34,13 +34,13 @@
             </ul>
         </div>
         <div class="one_third">
-            <h6 class="heading">Κοινωνικά Δίκτυα</h6>
+            <h1 class="heading">Κοινωνικά Δίκτυα</h1>
 
             <ul class="faico clear">
-                <li><a class="faicon-facebook" href="../under-construction.php"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="faicon-twitter" href="../under-construction.php"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="faicon-linkedin" href="../under-construction.php"><i class="fa fa-linkedin"></i></a></li>
-                <li><a class="faicon-google-plus" href="../under-construction.php""><i class=" fa fa-google-plus"></i></a></li>
+                <li><a class="faicon-facebook" aria-label="social media" href="../under-construction.php"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="faicon-twitter" aria-label="social media" href="../under-construction.php"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="faicon-linkedin" aria-label="social media" href="../under-construction.php"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="faicon-google-plus" aria-label="social media" href="../under-construction.php"><i class=" fa fa-google-plus"></i></a></li>
             </ul>
         </div>
     </footer>
@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<a id="backtotop" aria-label="goes to top" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>

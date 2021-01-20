@@ -76,6 +76,8 @@ include_once 'header-footer/header.php' // Include header of page
                 echo "</table>";
             } else if ($_SESSION["usertype"] == 0) {
 
+                $employeeData = employeeDataSQL($conn, $_SESSION["username"]);
+
                 echo "<h6 style='font-size: 30px;' class='heading font-x3'>Η εργασιακή σου κατάσταση</h6>";
                 echo "<hr style='border-color: #1c7aa8;'>";
                 echo "<table class='allign-center btmspace-30'>";
@@ -90,30 +92,30 @@ include_once 'header-footer/header.php' // Include header of page
 
                 // Output a row
                 echo "<tr>";
-                if ($_SESSION["employeeData"]["worksRemote_startDate"] == Null)
+                if ($employeeData["worksRemote_startDate"] == Null)
                     echo "<td>-</td>";
                 else
-                    echo "<td>{$_SESSION["employeeData"]["worksRemote_startDate"]}</td>";
-                if ($_SESSION["employeeData"]["worksRemote_endDate"] == Null)
+                    echo "<td>{$employeeData["worksRemote_startDate"]}</td>";
+                if ($employeeData["worksRemote_endDate"] == Null)
                     echo "<td>-</td>";
                 else
-                    echo "<td>{$_SESSION["employeeData"]["worksRemote_endDate"]}</td>";
-                if ($_SESSION["employeeData"]["inSuspension_startDate"] == Null)
+                    echo "<td>{$employeeData["worksRemote_endDate"]}</td>";
+                if ($employeeData["inSuspension_startDate"] == Null)
                     echo "<td>-</td>";
                 else
-                    echo "<td>{$_SESSION["employeeData"]["inSuspension_startDate"]}</td>";
-                if ($_SESSION["employeeData"]["inSuspension_endDate"] == Null)
+                    echo "<td>{$employeeData["inSuspension_startDate"]}</td>";
+                if ($employeeData["inSuspension_endDate"] == Null)
                     echo "<td>-</td>";
                 else
-                    echo "<td>{$_SESSION["employeeData"]["inSuspension_endDate"]}</td>";
-                if ($_SESSION["employeeData"]["permission_startDate"] == Null)
+                    echo "<td>{$employeeData["inSuspension_endDate"]}</td>";
+                if ($employeeData["permission_startDate"] == Null)
                     echo "<td>-</td>";
                 else
-                    echo "<td>{$_SESSION["employeeData"]["permission_startDate"]}</td>";
-                if ($_SESSION["employeeData"]["permission_endDate"] == Null)
+                    echo "<td>{$employeeData["permission_startDate"]}</td>";
+                if ($employeeData["permission_endDate"] == Null)
                     echo "<td>-</td>";
                 else
-                    echo "<td>{$_SESSION["employeeData"]["permission_endDate"]}</td>";
+                    echo "<td>{$employeeData["permission_endDate"]}</td>";
                 echo "</tr>";
 
                 // Close the table

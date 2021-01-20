@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
     echo    "</div>";
 
     if ($_SESSION["removeSuspension"] == false)
-        updateSuspensionDate($conn, $afm, date('Y-m-d', strtotime($startDate)), date('Y-m-d', strtotime($endDate)));
+        updateSuspensionDate($conn, $afm, $startDate, $endDate);
     else if ($_SESSION["removeSuspension"] == true)
         updateSuspensionDate($conn, $afm, NULL, NULL);
 }

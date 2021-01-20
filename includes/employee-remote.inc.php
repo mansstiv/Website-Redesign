@@ -42,7 +42,7 @@ if (isset($_POST["submit"])) {
     echo    "</div>";
 
     if ($_SESSION["removeRemote"] == false)
-        updateRemoteDate($conn, $afm, date('Y-m-d', strtotime($startDate)), date('Y-m-d', strtotime($endDate)));
+        updateRemoteDate($conn, $afm, $startDate, $endDate);
     else if ($_SESSION["removeRemote"] == true)
         updateRemoteDate($conn, $afm, NULL, NULL);
 }
