@@ -9,50 +9,50 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 
 ## Some pages
 
-## Before
+## Site Before
 
-###Homepage
+### Homepage
 
 ![old site](https://i.ibb.co/g3gJ3Qp/site-before.png)
 <br>
 
-## After
+## Site After
 
-###Homepage
+### Homepage
 
 ![homepage](https://i.ibb.co/4KhFmmN/home.png)
 <br>
 
-###Register Form
+### Register Form
 
 ![register form](https://i.ibb.co/GC1CXCb/register.png)
 <br>
 
-###Login Form
+### Login Form
 
 ![login form](https://i.ibb.co/p18PdXM/login.png)
 <br>
 
-###Contact Page
+### Contact Page
 
 ![contact page](https://i.ibb.co/xsZCghg/contact.png)
 <br>
 
-###Book Appointment
+### Book Appointment
 
 ![book apointment](https://i.ibb.co/ZzJfbGC/book-appointment.png)
 <br>
 
-###Homepage of employee
+### Homepage of employee
 
 ![homepage of employee](https://i.ibb.co/VQT3XnF/employer.png)
 <br>
 
-####Leave form of employee
+#### Leave form of employee
 
 ![leave form of employee](https://i.ibb.co/3WjzGbt/leave-form.png)
 <br>
 
-###Profile of employee
+### Profile of employee
 
 ![profile of employee](https://i.ibb.co/p1KNPkj/profile.png)
