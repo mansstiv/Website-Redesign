@@ -31,6 +31,10 @@ Following are some pictures of different interfaces around the website, after th
 ![login form](https://i.ibb.co/p18PdXM/login.png)
 <br>
 
+### Profile of employer
+![profile of employer](https://i.ibb.co/9tQMDhs/profile.png)
+<br>
+
 ### Contact Page
 ![contact page](https://i.ibb.co/xsZCghg/contact.png)
 <br>
@@ -46,6 +50,3 @@ Following are some pictures of different interfaces around the website, after th
 ### Leave form of employee
 ![leave form of employee](https://i.ibb.co/3WjzGbt/leave-form.png)
 <br>
-
-### Profile of employee
-![profile of employee](https://i.ibb.co/p1KNPkj/profile.png)
