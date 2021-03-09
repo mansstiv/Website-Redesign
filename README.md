@@ -16,14 +16,34 @@ Homepage
 
 ### After
 
-Homepage
+####Homepage
 
 ![homepage](https://i.ibb.co/4KhFmmN/home.png)
 
-Register Form
+####Register Form
 
 ![register form](https://i.ibb.co/GC1CXCb/register.png)
 
-Login Form
+####Login Form
 
 ![login form](https://i.ibb.co/p18PdXM/login.png)
+
+####Contact Page
+
+![contact page](https://i.ibb.co/xsZCghg/contact.png)
+
+####Book Appointment
+
+![book apointment](https://i.ibb.co/ZzJfbGC/book-appointment.png)
+
+####Profile of employee
+
+![profile of employee](https://i.ibb.co/p1KNPkj/profile.png)
+
+####Homepage of employee
+
+![homepage of employee](https://i.ibb.co/VQT3XnF/employer.png)
+
+#####Leave form of employee
+
+![leave form of employee](https://i.ibb.co/3WjzGbt/leave-form.png)
