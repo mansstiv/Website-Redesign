@@ -8,7 +8,7 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 4. Run localhost/Website-Redesign/ypakp/index.php in any browser. 
 
 ## Site Before
-This is the site before the redesign.
+How site of Ministry of Labour and Social Affairs (Greece) looked before...
 
 ### Homepage
 ![old site](https://i.ibb.co/g3gJ3Qp/site-before.png)
