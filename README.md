@@ -1,5 +1,5 @@
 # Website-Redesign
-Redesigned the website of "Ministry of Labour and Social Affairs (Greece)" for the course of Human-Computer Interaction. Both front-end (HTML &amp; CSS) and back-end (PHP &amp; MySQL) technologies were used.
+Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", as a part of a project for the course of Human-Computer Interaction. Both front-end (HTML &amp; CSS) and back-end (PHP &amp; MySQL) technologies were used.
 
 ## How to run
 1. To run a PHP program you need to have Xampp installed. 
