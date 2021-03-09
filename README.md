@@ -10,7 +10,7 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 For more information see the following [steps](https://www.edureka.co/blog/how-to-run-a-php-program-in-xampp/), which explain the process of installation and running.
 
 ## Site Before
-Homepage of Ministry of Labour and Social Affairs (Greece) before..So you can take a guess, how the rest of the interfaces would look like..
+Homepage of Ministry of Labour and Social Affairs (Greece) before..So you can take a guess, on how the rest of the interfaces would look like..
 
 ### Homepage
 ![old site](https://i.ibb.co/g3gJ3Qp/site-before.png)
