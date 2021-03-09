@@ -15,7 +15,7 @@ Homepage of Ministry of Labour and Social Affairs (Greece) before..So you can ta
 <br>
 
 ## Site After
-Following are some pictures of different pages around the website, after the "makeover"..
+Following are some pictures of different interfaces around the website, after the "makeover"..
 
 ### Homepage
 ![homepage](https://i.ibb.co/4KhFmmN/home.png)
