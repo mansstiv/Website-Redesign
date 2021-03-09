@@ -2,10 +2,10 @@
 Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for the course of Human-Computer Interaction. Both front-end (HTML &amp; CSS) and back-end (PHP &amp; MySQL) technologies were used.
 
 ## How to run
-1. To run a PHP program you need to have Xampp installed. 
+1. To run locally a PHP program you need to have Xampp installed. 
 2. After installation, start Mysql and Apache servers. 
-3. Git clone this repo under htdocs folder. For example for linux systems, htdocs can be found in this path /opt/lampp/htdocs.
-4. run localhost/Website-Redesign/ypakp/index.php.
+3. Git clone this repo under htdocs folder. For example, in linux systems, htdocs can be found in this location /opt/lampp/htdocs.
+4. Run localhost/Website-Redesign/ypakp/index.php in any browser. 
 
 ## Site Before
 This is the site before the redesign.
