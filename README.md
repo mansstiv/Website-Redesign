@@ -10,11 +10,20 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 ## Some pages
 
 ### Before
-This is the homepage of the old site.
+Homepage
 
 ![old site](https://i.ibb.co/g3gJ3Qp/site-before.png)
 
 ### After
 
-1. Homepage
+Homepage
+
 ![homepage](https://i.ibb.co/4KhFmmN/home.png)
+
+Register Form
+
+![register form](https://i.ibb.co/GC1CXCb/register.png)
+
+Login Form
+
+![login form](https://i.ibb.co/p18PdXM/login.png)
