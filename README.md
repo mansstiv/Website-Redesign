@@ -4,5 +4,5 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)" for t
 ## How to run
 1. To run a PHP program you need to have Xampp installed. 
 2. After installation, start Mysql and Apache servers. 
-3. Git clone this repo under htdocs folder. For example for linux systems, xamp and htdocs can be found here (/opt/lampp/htdocs).
+3. Git clone this repo under htdocs folder. For example for linux systems, htdocs can be found here (/opt/lampp/htdocs).
 4. run localhost/Website-Redesign/ypakp/index.php.
