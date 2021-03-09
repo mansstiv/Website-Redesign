@@ -8,6 +8,7 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 4. run localhost/Website-Redesign/ypakp/index.php.
 
 ## Site Before
+This is the site before the redesign.
 
 ### Homepage
 
@@ -15,6 +16,7 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 <br>
 
 ## Site After
+Following are some pictures of different pages around the website, after the "makeover".
 
 ### Homepage
 
