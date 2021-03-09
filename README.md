@@ -7,4 +7,14 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 3. Git clone this repo under htdocs folder. For example for linux systems, htdocs can be found here (/opt/lampp/htdocs).
 4. run localhost/Website-Redesign/ypakp/index.php.
 
-![alt text](https://i.ibb.co/4KhFmmN/home.png)
+## Some pages
+
+### Before
+This is the homepage of the old site.
+
+![old site](https://i.ibb.co/g3gJ3Qp/site-before.png)
+
+### After
+
+1. Homepage
+![homepage](https://i.ibb.co/4KhFmmN/home.png)
