@@ -5,7 +5,7 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 1. To run locally a PHP program you need to have Xampp installed. 
 2. After installation, start Mysql and Apache servers. 
 3. Clone this repo under htdocs folder. For example, in linux systems, htdocs can be found in this location ```/opt/lampp/htdocs```.
-4. Run ```localhost/phpmyadmin/``` in any browser, and import [myDatabase.sql](myDatabase.sql) in phpMyAdmin.
+4. Run ```localhost/phpmyadmin/``` in any browser and import [myDatabase.sql](myDatabase.sql) in phpMyAdmin.
 5. Run ```localhost/Website-Redesign/ypakp/index.php```. 
 
 For more information see the following [steps](https://www.edureka.co/blog/how-to-run-a-php-program-in-xampp/), which explain the process of installation and running.
