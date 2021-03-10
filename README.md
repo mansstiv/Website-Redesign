@@ -11,7 +11,7 @@ Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for 
 For more information see the following [steps](https://www.edureka.co/blog/how-to-run-a-php-program-in-xampp/), which explain the process of installation and running.
 
 ## Users & Log In
-* You can log in to the website, either as an employee or as an employer, and depending on your identity you'll have different permissions while exploring the  interfaces.
+* You can log in to the system, either as an employee or as an employer, and depending on your identity you'll have different permissions while exploring the website.
 * **Employer**:
   * *Username*: ```tilemachos```
   * *Password*: ```1234```
