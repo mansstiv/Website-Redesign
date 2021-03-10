@@ -13,11 +13,11 @@ For more information see the following [steps](https://www.edureka.co/blog/how-t
 ## Users & Log In
 * You can log in to the website, either as an employee or as an employer, and depending on your identity you'll have different permissions while exploring the  interfaces.
 * **Employer**:
-  * Username: *tilemachos*
-  * Password: *1234*
+  * *Username*: ```tilemachos```
+  * *Password*: ```1234```
 * **Employee** (3 possible accounts):
-  * Username: *manos*, *vasilis*, *dimitris*
-  * Password: *1234*
+  * *Username*: ```manos```, ```vasilis```, ```dimitris```
+  * *Password*: ```1234```
 
 ## Site Before
 Homepage of Ministry of Labour and Social Affairs (Greece) before..So you can take a guess, on how the rest of the interfaces would look like..
