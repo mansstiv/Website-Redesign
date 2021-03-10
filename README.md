@@ -37,11 +37,11 @@ Following are some pictures of different interfaces around the website, after th
 ![register form](https://i.ibb.co/GC1CXCb/register.png)
 <br>
 
-## Log in Form
+## Log In Form
 ![login form](https://i.ibb.co/p18PdXM/login.png)
 <br>
 
-## Profile of employer
+## Profile of Employer
 ![profile of employer](https://i.ibb.co/9tQMDhs/profile.png)
 <br>
 
@@ -53,10 +53,10 @@ Following are some pictures of different interfaces around the website, after th
 ![book apointment](https://i.ibb.co/ZzJfbGC/book-appointment.png)
 <br>
 
-## Homepage of employee
+## Homepage of Employee
 ![homepage of employee](https://i.ibb.co/VQT3XnF/employer.png)
 <br>
 
-## Leave form of employee
+## Leave Form of Employee
 ![leave form of employee](https://i.ibb.co/3WjzGbt/leave-form.png)
 <br>
