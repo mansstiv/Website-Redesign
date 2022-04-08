@@ -1,5 +1,5 @@
 # Website Redesign || Ministry of Labour and Social Affairs (Greece)
-Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for the course of Human-Computer Interaction. Both front-end (HTML &amp; CSS) and back-end (PHP &amp; MySQL) technologies were used. In [README.pdf](README.pdf) you can see more information (in greek) about the procedure that was undertaken, including the heuristic evaluation and prototyping.
+Redesigned the website of "Ministry of Labour and Social Affairs (Greece)", for the course of Human-Computer Interaction. Both front-end (HTML &amp; CSS) and back-end (PHP &amp; MySQL) technologies were used. In [README.pdf](https://github.com/mansstiv/Website-Redesign/blob/master/README.pdf) you can see more information (in greek) about the procedure that was undertaken, including the heuristic evaluation and prototyping.
 
 ## Front-End
 <a src="#"><img src="https://img.icons8.com/color/48/000000/html-5.png"/></a>
